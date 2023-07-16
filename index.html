@@ -1,0 +1,381 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/2de36720fb.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-luxon@1.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@2.0.0"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <div class="col-10 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #2b3147;">
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="changeColor(this)"><i class="fas fa-house " style="font-size: 2em;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="changeColor(this)"><i class="fas fa-bolt" style="font-size: 2em;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Support" onclick="changeColor(this)"><i class="fas fa-gear" style="font-size: 2em;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick="changeColor(this)"><i class="fas fa-circle-info" style="font-size: 2em;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About Us" onclick="changeColor(this)"><i class="fas fa-address-card" style="font-size: 2em;"></i></button>
+            </div>
+            <div class="col-12  col-sm-11 col-md-11 col-lg-11 home " id="main-content">
+                    <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
+                        <div class="p-2"><span class="lead" style="color: white;">CyberSpace</span></div>
+                        <div class="p-2" style="width: 100%; overflow: hidden;"><hr style="border-top: 1px solid rgb(219, 219, 219);"></div>
+                        <div class="p-2 d-flex align-items-center justify-content-between">
+                            <div class="d-inline"><span style="color: white;">Hello,</span></div>
+                            <div class="d-inline"><span style="color: white;" class="font-weight-bold">Username</span></div>
+                        </div>
+                        <div class="p-2" style="height: 100%;">
+                            <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+                                <img src="User.png" alt="#" class="rounded-circle img-fluid img-thumbnail" style="max-height: 100%; max-width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                        <div class="container" style="height: 100vh; width: 85vw; align-items: center;" >
+                            <div class="row d-flex justify-content-around mb-1 mt-1">
+                                <div class="card">
+                                    <canvas id="gaugeChart"></canvas>
+                                </div>
+                                <div class="card">
+                                    <canvas id="gaugeChartcurrent"></canvas>
+                                </div>
+                                <div class="card">
+                                    <canvas id="gaugeChartresistance"></canvas>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-start mt-3 mb-1">
+                                <div class="col-md-4">
+                                    <div class="cards1" style="height: 100%;">
+                                        <div class="card1 red" style="text-align: center;">
+                                            <div class="row mt-6 ">
+                                                <p style="font-family: MyCustomFont2; font-size: 20px; font-weight:bold; margin-top: 0;">Connection Time</p>
+                                          
+                                            
+                                              </div>
+                                            <div class="row  mb-8">
+                                                <div class="timer" style="color: #329da8; margin-top:-4px;">00:00:00</div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="card1 blue">
+                                          <div class="d-flex flex-column mt-2">
+                                            <div class="row justify-content-between mb-4">
+                                              <div class="col">
+                                                <i class="fas fa-gauge" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(1)"></i>
+                                                <div id="dropdown-1" class="dropdown-content">
+                                                  <p>Voltage</p>
+                                                  <p>Current</p>
+                                                  <p>Resistance</p>
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <i class="fas fa-gauge" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(2)"></i>
+                                                <div id="dropdown-2" class="dropdown-content">
+                                                  <p>Current</p>
+                                                  <p>Voltage</p>
+                                                  <p>Resistance</p>
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <i class="fas fa-gauge" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(3)"></i>
+                                                <div id="dropdown-3" class="dropdown-content">
+                                                  <p>Resistance</p>
+                                                  <p>Voltage</p>
+                                                  <p>Current</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="row justify-content-between mb-4">
+                                              <div class="col">
+                                                <i class="fas fa-chart-line" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(4)"></i>
+                                                <div id="dropdown-4" class="dropdown-content">
+                                                  <p>1</p>
+                                                  <p>2</p>
+                                                  <p>3</p>
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <i class="fas fa-chart-line" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(5)"></i>
+                                                <div id="dropdown-5" class="dropdown-content">
+                                                  <p>1</p>
+                                                  <p>2</p>
+                                                  <p>3</p>
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <i class="fas fa-chart-line" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(6)"></i>
+                                                <div id="dropdown-6" class="dropdown-content">
+                                                  <p>1</p>
+                                                  <p>2</p>
+                                                  <p>3</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="row justify-content-between">
+                                              <div class="col">
+                                                <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(7)"></i>
+                                                <div id="dropdown-7" class="dropdown-content">
+                                                  <p>1</p>
+                                                  <p>2</p>
+                                                  <p>3</p>
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(8)"></i>
+                                                <div id="dropdown-8" class="dropdown-content">
+                                                  <p>1</p>
+                                                  <p>2</p>
+                                                  <p>3</p>
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(9)"></i>
+                                                <div id="dropdown-9" class="dropdown-content">
+                                                  <p>1</p>
+                                                  <p>2</p>
+                                                  <p>3</p>
+                                                </div>
+                                              </div>
+                                              <div class="col">
+                                                <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(10)"></i>
+                                                <div id="dropdown-10" class="dropdown-content">
+                                                  <p>1</p>
+                                                  <p>2</p>
+                                                  <p>3</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                       
+                                        
+                                        
+                                        
+                                        <div class="card1 green ">
+                                          <div class="spinner-container p-2">
+                                            <div class="spin-container">
+                                              <span></span>
+                                              <span></span>
+                                              <span></span>
+                                              <span></span>
+                                            </div>
+                                            <div class="status-text">Connected</div>
+                                          </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="row d-flex justify-content-around">
+                                        
+                                            <div class="card2 mb-1" style="height: 33vh" >
+                                                <canvas id="LineChart" ></canvas>
+                                            </div>
+                                            <div class="card2 mt-1 pr-4 pl-4 pt-2 pb-2" style="height: 30vh">
+                                              <div class="d-flex flex-column">
+                                                  <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                                                      
+                                                      <div class="label">P<sub>in</sub></div>
+                                                      <div class="column-wrapper">
+                                                          <div class="column"id="pin"></div>
+                                                      </div>
+                                                      <div class="percentage" id="p1">--</div>
+                                                      
+                                                  </div>
+                                                  <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                                                      
+                                                      <div class="label">P<sub>out</sub></div>
+                                                      <div class="column-wrapper">
+                                                          <div class="column" id="pout"></div>
+                                                      </div>
+                                                      <div class="percentage" id="p2">--</div>
+                                                     
+                                                  </div>
+                                                  <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                                                      
+                                                      <div class="label">E<sub>in</sub></div>
+                                                      <div class="column-wrapper">
+                                                          <div class="column" id="ein"></div>
+                                                      </div>
+                                                      <div class="percentage" id="p3">--</div>
+                                                      
+                                                  </div>
+                                                  <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="label">E<sub>out</sub></div>
+                                                      <div class="column-wrapper">
+                                                          <div class="column" id="eout"></div>
+                                                      </div>
+                                                      <div class="percentage" id="p4">--</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          
+                                          </div>
+                                          
+                                          </div>
+                                          
+                                    </div>
+
+
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+            </div>
+        </div>
+    </div>
+    <style>
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 999;
+        background-color: #646464;
+        padding: 10px;
+        border: 1px solid #329da8;
+        border-radius: 4px;
+        /* Add additional styling properties */
+    }
+    
+    
+    
+    .dropdown-content p {
+        margin: 0;
+        padding: 5px;
+    }
+    
+    .dropdown-content p:hover {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: all 0.3s ease;
+  }
+  
+    
+    .dropdown-content p:first-child {
+        margin-top: 0;
+    }
+    
+    .dropdown-content p:last-child {
+        margin-bottom: 0;
+    }
+    
+    
+    
+      
+      .show {
+        display: block;
+      }
+      
+   
+    
+    </style>
+    <script>
+      // Variable to track the hover state of the card1 blue
+// Variable to track the currently open dropdown
+var openDropdown = null;
+
+// Event listener for mouseover on card1 blue
+document.querySelector(".card1.blue").addEventListener("mouseover", function() {
+    isCard1BlueHovered = true;
+});
+
+// Event listener for mouseout on card1 blue
+document.querySelector(".card1.blue").addEventListener("mouseout", function(event) {
+    var relatedTarget = event.relatedTarget || event.toElement;
+    if (!this.contains(relatedTarget)) {
+        isCard1BlueHovered = false;
+        hideDropdownMenus();
+    }
+});
+
+// Event listener for mouseout on dropdown menus
+var dropdowns = document.getElementsByClassName("dropdown-content");
+for (var i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].addEventListener("mouseout", function(event) {
+        var relatedTarget = event.relatedTarget || event.toElement;
+        if (!isCard1BlueHovered && !this.contains(relatedTarget)) {
+            hideDropdownMenus();
+        }
+    });
+}
+
+// Function to hide all dropdown menus
+function hideDropdownMenus() {
+    for (var i = 0; i < dropdowns.length; i++) {
+        dropdowns[i].classList.remove("show");
+    }
+    openDropdown = null;
+}
+
+// Function to toggle the visibility of the dropdown menu
+function toggleDropdown(iconNumber) {
+    var dropdown = document.getElementById("dropdown-" + iconNumber);
+    if (dropdown === openDropdown) {
+        dropdown.classList.remove("show");
+        openDropdown = null;
+    } else {
+        hideDropdownMenus();
+        dropdown.classList.add("show");
+        openDropdown = dropdown;
+    }
+}
+
+
+
+        function changeColor(element) {
+            // Get all buttons
+            var buttons = document.getElementsByClassName('btn-link');
+
+            // Remove the active-icon class from all buttons
+            for (var i = 0; i < buttons.length; i++) {
+                var button = buttons[i];
+                var icon = button.getElementsByTagName('i')[0];
+                icon.classList.remove('active-icon');
+            }
+
+            // Add the active-icon class to the clicked button
+            var icon = element.getElementsByTagName('i')[0];
+            icon.classList.add('active-icon');
+          }
+
+ 
+</script>
+<script src="Guage.js"></script>
+<script src="Guagecurrent.js"></script>
+<script src="Guageresistance.js"></script>
+<script src="RealtimeLine.js"></script>
+<script src="Bar.js"></script>
+<script src="time.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
