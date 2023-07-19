@@ -2,8 +2,6 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const ModbusRTU = require('modbus-serial');
 
-//Oyee
-
 let mainWindow;
 
 function createMainWindow() {
@@ -23,9 +21,7 @@ function createMainWindow() {
   mainWindow.loadFile('index.html');
 }
 
-app.whenReady().then(() => {
-  createMainWindow();
-
+function startModbusCommunication() {
   const modbusClient = new ModbusRTU();
   modbusClient.connectRTU('COM10', { baudRate: 9600, dataBits: 8, parity: 'none' }, (err) => {
     if (err) {
@@ -47,7 +43,32 @@ app.whenReady().then(() => {
           mainWindow.webContents.send('update', registerValues);
         }
       });
-    }, 2000);
+    }, 500);
   });
+}
+
+function handleSendCommand (event, value) {
+  console.log(value)
+}
+
+app.whenReady().then(() => {
+
+  createMainWindow();
+  startModbusCommunication();
+
+  ipcMain.on('send-command', handleSendCommand)
+
+  app.on('activate', () => {
+    if (BrowserWindow.getAllWindows().length === 0) {
+      createMainWindow()
+    }
+  })
+
 });
+
+app.on('window-all-closed', () => {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
 

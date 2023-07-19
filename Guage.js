@@ -2,12 +2,14 @@
  
  window.electronAPI.handlecontroller((event, registerValues) => {
      
-     newgauge1 = registerValues[0];
+    //  newgauge1 = registerValues[0];
      if(guagevoltage){
-         updatevoltageChart();
+        newgauge1 = registerValues[0]; 
+        updatevoltageChart();
      }
      else{
-         createvoltageChart();
+        newgauge1 = 0;
+        createvoltageChart();
      }
     
    });
