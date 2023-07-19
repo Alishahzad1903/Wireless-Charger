@@ -2,23 +2,24 @@
 
 window.electronAPI.handlecontroller((event, registerValues) => {
     
-    newgauge1 = registerValues[1];
-    if(guagecurrent){
-        updatecurrentChart();
-    }
-    else{
-        createcurrentChart();
-    }
-    
-  });
-  var guagecurrent;
+  newgauge1 = registerValues[1];
+  if(gaugecurrent){
+      updatecurrentChart();
+  }
+  else{
+      createcurrentChart();
+  }
+  
+});
+  
+var gaugecurrent;
 var ctxcurrent=document.getElementById('gaugeChartcurrent').getContext('2d');
-
+createcurrentChart();
 
 function createcurrentChart() {
     var datacurrent = {
         datasets: [{ 
-            data: [newgauge1, 100-newgauge1],
+            data: [0, 100-0],
             backgroundColor: ['#329da8','#d6d4d0'],
             borderWidth: 0
         }]
@@ -48,8 +49,8 @@ function createcurrentChart() {
           },
         },
         };
-        const guagecurrenttext={
-                  id:'guagecurrenttext',
+        const gaugecurrenttext={
+                  id:'gaugecurrenttext',
                   afterDatasetsDraw(chart,args,pluginOptions){
                       const{ctx,data,chartArea:{top,bottom,left,right,width,height},scales:{r}}=chart;
                       ctx.save();
@@ -75,19 +76,19 @@ function createcurrentChart() {
             
               }
               }
-              guagecurrent=new Chart(ctxcurrent, {
+              gaugecurrent=new Chart(ctxcurrent, {
                   type: 'doughnut',
                   data: datacurrent,
                   options: currentoptions,
-                  plugins:[guagecurrenttext]
+                  plugins:[gaugecurrenttext]
               });
 
 
 }
 
 function updatecurrentChart() {
-    guagecurrent.data.datasets[0].data = [newgauge1, 100 - newgauge1];
-    guagecurrent.update();
+    gaugecurrent.data.datasets[0].data = [newgauge1, 100 - newgauge1];
+    gaugecurrent.update();
   }
 
 
