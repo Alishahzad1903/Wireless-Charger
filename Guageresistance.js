@@ -2,23 +2,24 @@
 
 window.electronAPI.handlecontroller((event, registerValues) => {
     
-    newgauge1 = registerValues[2];
-    if(guageresistance){
-        updateresistanceChart();
-    }
-    else{
-        createresistanceChart();
-    }
-    
-  });
-  var guageresistance;
-  var ctxresistance=document.getElementById('gaugeChartresistance').getContext('2d');
+  newgauge1 = registerValues[2];
+  if(gaugeresistance){
+      updateresistanceChart();
+  }
+  else{
+      createresistanceChart();
+  }
+  
+});
 
+var gaugeresistance;
+var ctxresistance=document.getElementById('gaugeChartresistance').getContext('2d');
+createresistanceChart();
 
 function createresistanceChart() {
     var dataresistance = {
         datasets: [{ 
-            data: [newgauge1, 100-newgauge1],
+            data: [0, 100-0],
             backgroundColor: ['#329da8','#d6d4d0'],
             borderWidth: 0
         }]
@@ -48,8 +49,8 @@ function createresistanceChart() {
           },
         },
         };
-        const guageresistancetext={
-            id:'guageresistancetext',
+        const gaugeresistancetext={
+            id:'gaugeresistancetext',
                     afterDatasetsDraw(chart,args,pluginOptions){
                         const{ctx,data,chartArea:{top,bottom,left,right,width,height},scales:{r}}=chart;
                         ctx.save();
@@ -75,19 +76,19 @@ function createresistanceChart() {
             
               }
               }
-              guageresistance=new Chart(ctxresistance, {
+              gaugeresistance=new Chart(ctxresistance, {
                   type: 'doughnut',
                   data: dataresistance,
                   options: resistanceoptions,
-                  plugins:[guageresistancetext]
+                  plugins:[gaugeresistancetext]
               });
 
 
 }
 
 function updateresistanceChart() {
-    guageresistance.data.datasets[0].data = [newgauge1, 100 - newgauge1];
-    guageresistance.update();
+    gaugeresistance.data.datasets[0].data = [newgauge1, 100 - newgauge1];
+    gaugeresistance.update();
   }
 
 
