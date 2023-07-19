@@ -1,3 +1,44 @@
+/* Home drop down styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background-color: #646464;
+  padding: 10px;
+  border: 1px solid #329da8;
+  border-radius: 4px;
+  /* Add additional styling properties */
+}
+
+.dropdown-content p {
+  margin: 0;
+  padding: 5px;
+}
+
+.dropdown-content p:hover {
+cursor: pointer;
+font-weight: bold;
+font-size: 1.2em;
+transition: all 0.3s ease;
+}
+
+
+.dropdown-content p:first-child {
+  margin-top: 0;
+}
+
+.dropdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.show {
+  display: block;
+}
+
+
+
+
 /*spinner css*/
 .spinner-container {
   position: relative;
