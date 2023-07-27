@@ -24,7 +24,7 @@
     <!-- Main row -->
     <div class="row vh-100">
       <!-- Sidebar column -->
-      <div class="col-10 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #2b3147;">
+      <div class="col-10 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #2b3147; width: 10vw;">
         <!-- Sidebar buttons with Font Awesome icons -->
         <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="changeColor(this)"><i class="fas fa-house" style="font-size: 2em;"></i></button>
         <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="changeColor(this)"><i class="fas fa-bolt" style="font-size: 2em;"></i></button>
@@ -37,7 +37,7 @@
         <!-- Top section -->
         <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
           <div class="p-2"><span class="lead" style="color: white;">cyberSpace</span></div>
-          <div class="p-2" style="width: 100%; overflow: hidden;"><hr style="border-top: 1px solid rgb(219, 219, 219);"></div>
+          <div class="p-2" style="width: 100%; overflow: hidden;"><hr style="border-top: 0.1vh solid rgb(219, 219, 219);"></div>
           <div class="p-2 d-flex align-items-center justify-content-between">
             <div class="d-inline"><span style="color: white;">Hello,</span></div>
             <div class="d-inline"><span style="color: white;" class="font-weight-bold">Username</span></div>
@@ -51,7 +51,7 @@
         <!-- Main content area -->
         <div class="container" style="height: 100vh; width: 85vw; align-items: center;">
           <!-- Row with gauge charts -->
-          <div class="row d-flex justify-content-around mb-1 mt-1">
+          <div class="row d-flex justify-content-around mb-1 mt-1" style="height: 25%;">
             <div class="card">
               <canvas id="gaugeChart"></canvas>
             </div>
@@ -70,10 +70,10 @@
                 <!-- Card for connection time -->
                 <div class="card1 red" style="text-align: center;">
                   <div class="row mt-6">
-                    <p style="font-family: MyCustomFont2; font-size: 20px; font-weight:bold; margin-top: 0;">Connection Time</p>
+                    <p style="font-family: MyCustomFont2; font-size: 1.3rem; font-weight:bold; margin-top: 0;">Connection Time</p>
                   </div>
                   <div class="row mb-8">
-                    <div class="timer" style="color: #329da8; margin-top:-4px;">00:00:00</div>
+                    <div class="timer" style="color: #329da8; margin-top:-1vh;">00:00:00</div>
                   </div>
                 </div>
                 <!-- Card with dropdown menus -->
@@ -188,11 +188,11 @@
             <div class="col-md-8">
               <div class="row d-flex justify-content-around">
                 <!-- Card with line chart -->
-                <div class="card2 mb-1" style="height: 33vh">
+                <div class="card2 mb-1" style="height: 32vh; ">
                   <canvas id="LineChart"></canvas>
                 </div>
                 <!-- Card with responsive progress bar -->
-                <div class="card2 mt-1 pr-4 pl-4 pt-2 pb-2" style="height: 30vh">
+                <div class="card2 mt-1 pr-4 pl-4 pt-2 pb-2" style="height: 32vh;">
                   <div class="d-flex flex-column">
                     <!-- Additional data for power and energy -->
                     <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">

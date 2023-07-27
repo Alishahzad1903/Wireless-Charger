@@ -49,12 +49,12 @@ transition: all 0.3s ease;
 
 .spin-container {
   position: relative;
-  border-radius: 50%;
+  border-radius: 0%;
   height: 100%;
   width: 100%;
   animation: rotate_3922 1.2s linear infinite;
-  background-color: #9b59b6;
-  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+  /* background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd); */
 }
 
 .spin-container span {
@@ -67,7 +67,9 @@ transition: all 0.3s ease;
   border-radius: 50%;
   height: 100%;
   width: 100%;
-  background-color: #00F000; /* Change color here */
+  background-color: var(--spinner-color, #F00000);
+
+  /* background-color: #00F000; Change color here */
   /* background-image: linear-gradient(#297d14, #00ff00); */
 }
 
@@ -100,14 +102,14 @@ transition: all 0.3s ease;
 }
 
 .status-text {
-  content: "Connected"; /* Change content here */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  content: "Connected"; 
+  position: relative;
+  top: -62%;
+  left: 0%;
+  transform: translate(0%, 0%);
   font-family: Arial, sans-serif;
   font-size: 12px;
-  color: #00F000; /* Change color here */
+  color: #F00000; /* Change color here */
 }
 
 @keyframes rotate_3922 {
@@ -182,7 +184,7 @@ transition: all 0.3s ease;
 
 body .card {
   box-sizing: border-box;
-  width: 26vw; 
+  width: 30%; 
   min-width: calc((190px / 100vw) * 100);  
   height: 26vh;
   background-color: #2b3147 !important;
@@ -283,7 +285,7 @@ body .card:active {
   margin-bottom: 0;
 }
  .card2 {
-  width: 790px;
+  width: 100%;
   height: calc((250px / 100vh) * 100);
   background-color: #2b3147;
   border-radius: 20px;

@@ -45,16 +45,21 @@ window.onload = function() {
     return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
   }
 
-  window.electronAPI.handleClock((event, signal) => {
-    
+  window.electronAPI.handleConnection((event, signal) => {
     if (signal == false) {
       stopTimer();
+      //change color to gray
+      document.querySelector(".status-text").style.color = "#F00000";
+      document.querySelector(".spin-container").style.setProperty("--spinner-color", "#F00000");
+
     } else {
-      // Reset the elapsed time and start the timer
       elapsedTime = 0;
       startTimer();
-    }
-    
+      //change color to green
+      document.querySelector(".status-text").style.color = "#00F000";
+      document.querySelector(".spin-container").style.setProperty("--spinner-color", "#00F000");
+
+    } 
   });
 
 };
