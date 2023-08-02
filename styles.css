@@ -43,19 +43,19 @@ transition: all 0.3s ease;
 /*spinner css*/
 .spinner-container {
   position: relative;
-  height: 96px;
-  width: 96px;
+  height: 80px;
+  width: 80px;
   margin: 0 auto;
 }
 
 .spin-container {
   position: relative;
-  border-radius: 50%;
+  border-radius: 0%;
   height: 100%;
   width: 100%;
   animation: rotate_3922 1.2s linear infinite;
-  background-color: #9b59b6;
-  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+  /* background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd); */
 }
 
 .spin-container span {
@@ -68,7 +68,9 @@ transition: all 0.3s ease;
   border-radius: 50%;
   height: 100%;
   width: 100%;
-  background-color: #00F000; /* Change color here */
+  background-color: var(--spinner-color, #F00000);
+
+  /* background-color: #00F000; Change color here */
   /* background-image: linear-gradient(#297d14, #00ff00); */
 }
 
@@ -101,14 +103,14 @@ transition: all 0.3s ease;
 }
 
 .status-text {
-  content: "Connected"; /* Change content here */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  content: "Connected"; 
+  position: relative;
+  top: -62%;
+  left: 0%;
+  transform: translate(0%, 0%);
   font-family: Arial, sans-serif;
   font-size: 12px;
-  color: #00F000; /* Change color here */
+  color: #F00000; /* Change color here */
 }
 
 @keyframes rotate_3922 {
@@ -136,8 +138,13 @@ transition: all 0.3s ease;
 body .card {
   box-sizing: border-box;
   width: 30%; 
+
+  min-width: calc((190px / 100vw) * 100);  
+  height: 26vh;
+
   
   height: 25vh;
+
   background-color: #2b3147 !important;
   /* background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%) !important; */
   
@@ -191,6 +198,7 @@ body .card:active {
   height: 30vh !important;
   justify-content: flex-start !important;
   padding: 12px !important;
+  /* overflow: hidden; */
 }
 
 .cards1 .green {
@@ -236,8 +244,7 @@ body .card:active {
   margin-bottom: 0;
 }
  .card2 {
-  width: 790px;
-  height: calc((250px / 100vh) * 100);
+  width: 100%;
   background-color: #2b3147;
   border-radius: 20px;
  
@@ -525,8 +532,10 @@ body {
 
 
 .home{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,121,9,1) 0%, rgba(124,123,123,1) 0%, rgba(105,105,105,1) 0%, rgba(1,207,242,1) 100%);
+    background: #329da8;
+
+  /* background: rgb(2,0,36); */
+  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,121,9,1) 0%, rgba(124,123,123,1) 0%, rgba(105,105,105,1) 0%, rgba(1,207,242,1) 100%); */
 }
 .btn-link {
   transition: transform 0.3s ease-in-out;
@@ -562,6 +571,7 @@ padding: 15px; /* adjust as needed */
 .outer-wrapper {
 background: transparent;
 width: 100%;  /* Adjust as needed */
+
 }
 
 .column-wrapper {

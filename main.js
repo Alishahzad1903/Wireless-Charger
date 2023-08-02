@@ -18,6 +18,7 @@ function createMainWindow() {
       preload: path.join(__dirname, 'preload.js')
     }
   });
+  mainWindow.setMinimumSize(800, 600);
   mainWindow.setMenu(null);
 
   mainWindow.webContents.openDevTools();
@@ -39,8 +40,8 @@ function startModbusCommunication() {
 
     setInterval(() => {
 
-      // Set a timeout of 5 seconds
-      const timeoutDuration = 1000;
+      // Set a timeout
+      const timeoutDuration = 500;
       let isTimeoutTriggered = false;
 
       // Set a timeout to handle the case when the slave doesn't respond within the specified duration
@@ -52,11 +53,10 @@ function startModbusCommunication() {
           /*Stop the clock here*/
           if(isClockRunning){
             isClockRunning = false;
-            mainWindow.webContents.send('clock-control', isClockRunning);
+            mainWindow.webContents.send('connection-control', isClockRunning);
           }
         }
       }, timeoutDuration);
-      
 
       modbusClient.readHoldingRegisters(startAddress, numRegisters, (error, data) => {
         clearTimeout(timeout); // Clear the timeout since the response arrived before the timeout
@@ -73,16 +73,19 @@ function startModbusCommunication() {
         else {
           console.log("Clock signaled to start")
           isClockRunning = true;
-          mainWindow.webContents.send('clock-control', isClockRunning);
+          mainWindow.webContents.send('connection-control', isClockRunning);
         }
       });
-    }, 1000);
+      
+    }, 500);
   });
 }
 
 
 function handleSendCommand (event, value) {
   console.log(value);
+
+  /* Write  */
 }
 
 app.whenReady().then(() => {
@@ -90,9 +93,7 @@ app.whenReady().then(() => {
   createMainWindow();
   startModbusCommunication();
 
-
   ipcMain.on('send-command', handleSendCommand);
-
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {

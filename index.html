@@ -27,7 +27,7 @@
     <!-- Main row -->
     <div class="row vh-100">
       <!-- Sidebar column -->
-      <div class="col-10 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #2b3147;">
+      <div class="col-10 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #2b3147; width: 10vw;">
         <!-- Sidebar buttons with Font Awesome icons -->
         <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="changeColor(this)"><i class="fas fa-house" style="font-size: 2em;"></i></button>
         <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="changeColor(this)"><i class="fas fa-bolt" style="font-size: 2em;"></i></button>
@@ -40,7 +40,7 @@
         <!-- Top section -->
         <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
           <div class="p-2"><span class="lead" style="color: white;">cyberSpace</span></div>
-          <div class="p-2" style="width: 100%; overflow: hidden;"><hr style="border-top: 1px solid rgb(219, 219, 219);"></div>
+          <div class="p-2" style="width: 100%; overflow: hidden;"><hr style="border-top: 0.1vh solid rgb(219, 219, 219);"></div>
           <div class="p-2 d-flex align-items-center justify-content-between">
             <div class="d-inline"><span style="color: white;">Hello,</span></div>
             <div class="d-inline"><span style="color: white;" class="font-weight-bold">Username</span></div>
@@ -54,7 +54,7 @@
         <!-- Main content area -->
         <div class="container" style="height: 100%; width: 100%; align-items: center;">
           <!-- Row with gauge charts -->
-          <div class="row d-flex justify-content-around mb-1 mt-1">
+          <div class="row d-flex justify-content-around mb-1 mt-1" style="height: 25%;">
             <div class="card">
               <canvas id="gaugeChart"></canvas>
             </div>
@@ -73,19 +73,19 @@
                 <!-- Card for connection time -->
                 <div class="card1 red" style="text-align: center;">
                   <div class="row mt-6">
-                    <p style="font-family: MyCustomFont2; font-size: 20px; font-weight:bold; margin-top: 0;">Connection Time</p>
+                    <p style="font-family: MyCustomFont2; font-size: 1.3rem; font-weight:bold; margin-top: 0;">Connection Time</p>
                   </div>
                   <div class="row mb-8">
-                    <div class="timer" style="color: #329da8; margin-top:-4px;">00:00:00</div>
+                    <div class="timer" style="color: #329da8; margin-top:-1vh;">00:00:00</div>
                   </div>
                 </div>
                 <!-- Card with dropdown menus -->
                 <div class="card1 blue">
-                  <div class="d-flex flex-column mt-2">
+                  <div class="d-flex flex-column justify-content-center" style="width: 23.5vw">
                     <!-- Dropdowns for gauge options -->
-                    <div class="row justify-content-between mb-4">
+                    <div class="row justify-content-between pb-2 pt-2">
                       <div class="col">
-                        <i class="fas fa-gauge" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(1)"></i>
+                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(1)"></i>
                         <div id="dropdown-1" class="dropdown-content">
                           <p>Voltage</p>
                           <p>Current</p>
@@ -93,7 +93,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-gauge" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(2)"></i>
+                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(2)"></i>
                         <div id="dropdown-2" class="dropdown-content">
                           <p>Current</p>
                           <p>Voltage</p>
@@ -101,7 +101,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-gauge" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(3)"></i>
+                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(3)"></i>
                         <div id="dropdown-3" class="dropdown-content">
                           <p>Resistance</p>
                           <p>Voltage</p>
@@ -110,9 +110,9 @@
                       </div>
                     </div>
                     <!-- Dropdowns for chart options -->
-                    <div class="row justify-content-between mb-4">
+                    <div class="row justify-content-between pb-2 pt-2">
                       <div class="col">
-                        <i class="fas fa-chart-line" style="color: #329da8;font-size: 2em;" onclick="toggleDropdown(4)"></i>
+                        <i class="fas fa-chart-line" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(4)"></i>
                         <div id="dropdown-4" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -120,7 +120,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(5)"></i>
+                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(5)"></i>
                         <div id="dropdown-5" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -128,7 +128,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(6)"></i>
+                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(6)"></i>
                         <div id="dropdown-6" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -137,9 +137,9 @@
                       </div>
                     </div>
                     <!-- Dropdowns for bar chart options -->
-                    <div class="row justify-content-between">
+                    <div class="row justify-content-between pb-2 pt-2">
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(7)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(7)"></i>
                         <div id="dropdown-7" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -147,7 +147,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(8)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(8)"></i>
                         <div id="dropdown-8" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -155,7 +155,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(9)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(9)"></i>
                         <div id="dropdown-9" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -163,7 +163,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 2em;" onclick="toggleDropdown(10)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(10)"></i>
                         <div id="dropdown-10" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -175,7 +175,7 @@
                 </div>
                 <!-- Card with connection status -->
                 <div class="card1 green">
-                  <div class="spinner-container p-2">
+                  <div class="spinner-container">
                     <div class="spin-container">
                       <span></span>
                       <span></span>
@@ -191,35 +191,35 @@
             <div class="col-md-8 col-lg-8">
               <div class="row d-flex justify-content-around">
                 <!-- Card with line chart -->
-                <div class="card2 mb-1" style="height: 33vh">
+                <div class="card2 mb-1" style="height: 32vh; ">
                   <canvas id="LineChart"></canvas>
                 </div>
                 <!-- Card with responsive progress bar -->
-                <div class="card2 mt-1 pr-4 pl-4 pt-2 pb-2" style="height: 30vh">
+                <div class="card2 mt-1 pr-4 pl-4 pt-2 pb-2" style="height: 32vh;">
                   <div class="d-flex flex-column">
                     <!-- Additional data for power and energy -->
-                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">P<sub>in</sub></div>
                       <div class="column-wrapper">
                         <div class="column" id="pin"></div>
                       </div>
                       <div class="percentage" id="p1">--</div>
                     </div>
-                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">P<sub>out</sub></div>
                       <div class="column-wrapper">
                         <div class="column" id="pout"></div>
                       </div>
                       <div class="percentage" id="p2">--</div>
                     </div>
-                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">E<sub>in</sub></div>
                       <div class="column-wrapper">
                         <div class="column" id="ein"></div>
                       </div>
                       <div class="percentage" id="p3">--</div>
                     </div>
-                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-3">
+                    <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">E<sub>out</sub></div>
                       <div class="column-wrapper">
                         <div class="column" id="eout"></div>
