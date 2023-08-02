@@ -74,6 +74,7 @@ function startModbusCommunication() {
           mainWindow.webContents.send('connection-control', isClockRunning);
         }
       });
+      
     }, 500);
   });
 }
