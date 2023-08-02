@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <link rel="stylesheet" href="backstyle.css">
+  <script src="https://kit.fontawesome.com/2de36720fb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #2b3147 ">
+
+                
+                <!-- Sidebar -->
+            
+            
+            </div>
+            <div class="col-11 col-sm-11 col-md-11 col-lg-11 home px-0" id="main-content" >
+                <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
+                    <div class="p-2"><span class="lead" style="color: Black;">CyberSpace</span></div>
+                    <div class="p-2" style="width: 100%; overflow: hidden;"><hr style="border-top: 1px solid rgb(0, 0, 0);"></div>
+                    <div class="p-2 d-flex align-items-center justify-content-between">
+                        <div class="d-inline"><span style="color: Black;">Hello,</span></div>
+                        <div class="d-inline"><span style="color: rgb(0, 0, 0);" class="font-weight-bold">Username</span></div>
+                    </div>
+                    <div class="p-2" style="height: 100%;">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+                            <img src="User.png" alt="#" class="rounded-circle img-fluid img-thumbnail" style="max-height: 100%; max-width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="container" style="width: 100%; height: 100%; ">
+                  <div class="settings-heading">
+                    <h2>Settings</h2>
+                  </div>
+                  <div class="card1 shadow">
+                    <div class="row">
+                      <div class="col">
+                        <p style="font-size: 25px; font-weight: bold;">Variable X</p>
+                      </div>
+                      <div class="col">
+                        <div class="d-flex flex-row" style="width:100%">
+                          <div class="p-2" style="width:80%">
+                            <input id="myRange" class="slider" value="50" max="100" min="0" type="range">
+                          </div>
+                          <div>
+                            <div class="score" id="score">100</div>
+                          </div>
+                        </div>
+                        
+                        
+
+                        <!-- Input element for Variable X (e.g., radio buttons, range selector, dropdown) -->
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <p style="font-size: 25px; font-weight: bold;">Variable Y</p>
+                      </div>
+                      <div class="col">
+                        <div class="d-flex flex-row" style="width:100%">
+                          <div class="p-2" style="width:80%"><input id="myRange" class="slider" value="50" max="100" min="0" type="range"></div>
+                          <div><div class="score">100</div></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <p style="font-size: 25px; font-weight: bold;"> Variable A</p>
+                      </div>
+                      <div class="col">
+                        <input type="checkbox" class="theme-checkbox">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <p style="font-size: 25px; font-weight: bold;"> Variable B</p>
+                      </div>
+                      <div class="col">
+                        <input type="checkbox" class="theme-checkbox">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <p style="font-size: 25px; font-weight: bold;"> Variable H</p>
+                      </div>
+                      <div class="col DROPDOWN">
+                        <div class="row justify-content-between mb-4" style="width:100%;">
+                          <div class="col">
+                            <i class="fas fa-chart-line" style="color: rgb(19, 6, 255);font-size: 2em;" onclick="toggleDropdown(4)"></i>
+                            <div id="dropdown-4" class="dropdown-content">
+                              <p>1</p>
+                              <p>2</p>
+                              <p>3</p>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <i class="fas fa-chart-line" style="color: rgb(19, 6, 255); font-size: 2em;" onclick="toggleDropdown(5)"></i>
+                            <div id="dropdown-5" class="dropdown-content">
+                              <p>1</p>
+                              <p>2</p>
+                              <p>3</p>
+                            </div>
+                          </div>
+                          <div class="col">
+                            <i class="fas fa-chart-line" style="color: rgb(19, 6, 255); font-size: 2em;" onclick="toggleDropdown(6)"></i>
+                            <div id="dropdown-6" class="dropdown-content">
+                              <p>1</p>
+                              <p>2</p>
+                              <p>3</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <p style="font-size: 25px; font-weight: bold;"> Variable C</p>
+                      </div>
+                      <div class="col">
+                        <div class="radio-inputs">
+                          <label>
+                            <input class="radio-input" type="radio" name="engine">
+                              <span class="radio-tile">
+                                <span class="radio-icon">
+                                  
+                                </span>
+                                <span class="radio-label">Bicycle</span>
+                              </span>
+                          </label>
+                          <label>
+                            <input checked="" class="radio-input" type="radio" name="engine">
+                            <span class="radio-tile">
+                              <span class="radio-icon">
+                                 
+                              </span>
+                              <span class="radio-label">Motorbike</span>
+                            </span>
+                          </label>
+                          <label>
+                            <input class="radio-input" type="radio" name="engine">
+                            <span class="radio-tile">
+                              <span class="radio-icon">
+                                
+                              </span>
+                              <span class="radio-label">Car</span>
+                            </span>
+                          </label>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+                        
+                    
+                    
+            </div>
+          </div>
+            
+            
+        </div>
+    </div>
+</body>
+
+<script>
+ 
+  
+
+      // Variable to track the currently open dropdown
+    var openDropdown = null;
+
+    // Event listener for mouseover on card1 blue
+    document.querySelector(".col.DROPDOWN").addEventListener("mouseover", function() {
+        isCard1BlueHovered = true;
+    });
+
+    // Event listener for mouseout on card1 blue
+    document.querySelector(".col.DROPDOWN").addEventListener("mouseout", function(event) {
+        var relatedTarget = event.relatedTarget || event.toElement;
+        if (!this.contains(relatedTarget)) {
+            isCard1BlueHovered = false;
+            hideDropdownMenus();
+        }
+    });
+
+    // Event listener for mouseout on dropdown menus
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+        dropdowns[i].addEventListener("mouseout", function(event) {
+            var relatedTarget = event.relatedTarget || event.toElement;
+            if (!isCard1BlueHovered && !this.contains(relatedTarget)) {
+                hideDropdownMenus();
+            }
+        });
+    }
+
+    // Function to hide all dropdown menus
+    function hideDropdownMenus() {
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].classList.remove("show");
+        }
+        openDropdown = null;
+    }
+
+    // Function to toggle the visibility of the dropdown menu
+    function toggleDropdown(iconNumber) {
+        var dropdown = document.getElementById("dropdown-" + iconNumber);
+        if (dropdown === openDropdown) {
+            dropdown.classList.remove("show");
+            openDropdown = null;
+        } else {
+            hideDropdownMenus();
+            dropdown.classList.add("show");
+            openDropdown = dropdown;
+        }
+    }
+
+  
+</script>
+
+<style>
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background-color: #646464;
+  padding: 10px;
+  border: 1px solid #329da8;
+  border-radius: 4px;
+  /* Add additional styling properties */
+}   
+
+
+.dropdown-content p {
+  margin: 0;
+  padding: 5px;
+}
+
+.dropdown-content p:hover {
+cursor: pointer;
+font-weight: bold;
+font-size: 1.2em;
+transition: all 0.3s ease;
+}
+
+
+.dropdown-content p:first-child {
+  margin-top: 0;
+}
+
+.dropdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+
+.show {
+  display: block;
+}
+
+
+
+
+
+
+.range {
+  height: 100%;
+  width: 100%; /* Set width to 100% */
+  background-color: var(--first-color-light);
+  border-radius: 4rem;
+  box-shadow: 0 6px 16px hsla(256, 72%, 24%, .15);
+  
+  display: grid;
+}
+
+.range__content {
+  position: relative;
+  width: 100%; /* Set width to 100% */
+  display: grid;
+  place-items: center;
+}
+
+.range__slider {
+  width: 100%;
+  height: 16px;
+  background-color: var(--first-color-lighten);
+  border-radius: 4rem;
+  box-shadow: 0 4px 12px hsla(256, 72%, 24%, .2);
+  overflow: hidden;
+}
+
+
+.range__slider-line {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  width: 0;
+}
+
+.range__thumb {
+  width: 32px;
+  height: 32px;
+  background-color: var(--first-color-lighten);
+  border-radius: 50%;
+  box-shadow: 0 0 12px hsla(256, 72%, 24%, .2);
+  position: absolute;
+}
+
+/* Value input range */
+.range__value {
+  width: 64px;
+  height: 64px;
+  background: var(--gradient-color);
+  position: absolute;
+  top: -82px;
+  left: -16px;
+  border-radius: 2rem 2rem 2rem .25rem;
+  transform: rotate(-45deg);
+  display: grid;
+  place-items: center;
+}
+
+.range__value-number {
+  transform: rotate(45deg);
+  color: var(--white-color);
+  font-size: var(--h1-font-size);
+}
+
+/* Default input range */
+.range__input {
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  position: absolute;
+  opacity: 0;
+}
+
+.range__input::-webkit-slider-thumb {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+}
+
+.range__input::-webkit-slider-thumb:hover {
+  cursor: pointer;
+}
+</style>
+
+
+
+
+<script>
+function updateScore() {
+  const slider = document.getElementById('myRange');
+  const scoreElement = document.getElementById('score');
+  scoreElement.textContent = slider.value;
+}
+const slider = document.getElementById('myRange');
+  slider.addEventListener('input', updateScore);
+</script>

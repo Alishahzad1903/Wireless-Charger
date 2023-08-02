@@ -1,4 +1,3 @@
-
 // Variable to track the currently open dropdown
 var openDropdown = null;
 
