@@ -1,0 +1,333 @@
+.home{
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,121,9,1) 0%, rgba(124,123,123,1) 0%, rgba(105,105,105,1) 0%, rgba(1,207,242,1) 100%);
+}
+body{
+  
+}
+.card1 {
+    width: 80%;
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    padding :20px;
+    justify-content: space-between;
+    background-color: #2b3147;
+    color: white;
+    border-radius: 20px;
+    transition: border-radius 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   }
+
+   .settings-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2b3147; /* You can change the background color to your desired style */
+    color: #fff; /* Text color for the heading */
+    padding: 5px 0;
+    border-radius: 30px;
+    font-size: 24px;
+  }
+
+   .row {
+    
+    transition: background-color 0.3s;
+    flex: 1;
+  }
+  
+  /* Highlight row on hover */
+  .row:hover {
+    background-color: rgba(0, 122, 255, 0.1);
+  }
+
+   .card1 .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Optional: Add margin between rows */
+    border-radius: 10px;
+  }
+  
+  /* Custom CSS for the columns */
+  .card1 .col {
+    flex: 1; /* Each column takes equal space within the row */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Optional: Add styles for the variable labels (left column) */
+  .card1 .col p {
+    margin: 0;
+    font-weight: bold;
+    /* Add more styles as needed */
+  }
+
+   /* .card:hover {
+    background-color: #309df0;
+    border-radius: 15px;
+    transform: scale(1.1);
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    z-index: 1;
+    cursor: pointer;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 10%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .card:hover::before {
+    opacity: 1;
+  } */
+   
+   .shadow {
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0 0  0 2px rgb(190, 190, 190),
+                0.3em 0.3em 1em rgba(0,0,0,0.3);
+   }
+
+
+   .score, .min-score, .max-score {
+    flex: 1;
+    text-align: center;
+  }
+
+
+   .slider {
+    -webkit-appearance: none;
+    width: 98%;
+    height: 10px;
+    border-radius: 5px;
+    background: rgb(236, 236, 248);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); */
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(19, 6, 255);
+    /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,103,121,1) 35%, rgba(0,212,255,1) 100%); */
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,103,121,1) 35%, rgba(0,212,255,1) 100%);
+    cursor: pointer;
+  }
+  
+.score{
+    font-family: MyCustomFont2; 
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Title{
+    font-family: MyCustomFont2; 
+    font-size: 25px;
+    font-weight: bold;
+}
+
+  @font-face {
+    font-family: MyCustomFont;
+    src: url('/Users/ali/Library/Fonts/Technology-BoldItalic.ttf');
+    src: url("C:/Users/PC/AppData/Local/Microsoft/Windows/Fonts/Technology-BoldItalic.ttf");
+  }
+  
+  @font-face {
+    font-family: MyCustomFont2;
+    src: url(Noto_Sans_JP/NotoSansJP-VariableFont_wght.ttf)
+  }
+
+
+
+
+
+
+  .theme-checkbox {
+    --toggle-size: 11px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 6.25em;
+    height: 3.125em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #1c2bf3)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #1c2bf3 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #1c2bf3 50%) no-repeat;
+    background-size: 205%;
+    background-position: 0;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    border-radius: 99em;
+    position: relative;
+    cursor: pointer;
+    font-size: var(--toggle-size);
+  }
+  
+  .theme-checkbox::before {
+    content: "";
+    width: 2.25em;
+    height: 2.25em;
+    position: absolute;
+    top: 0.438em;
+    left: 0.438em;
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #efefef), color-stop(50%, #1c2bf3)) no-repeat;
+    background: -o-linear-gradient(left, #efefef 50%, #1c2bf3 50%) no-repeat;
+    background: linear-gradient(to right, #efefef 50%, #1c2bf3 50%) no-repeat;
+    background-size: 205%;
+    background-position: 100%;
+    border-radius: 50%;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .theme-checkbox:checked::before {
+    left: calc(100% - 2.25em - 0.438em);
+    background-position: 0;
+  }
+  
+  .theme-checkbox:checked {
+    background-position: 100%;
+  }
+
+
+
+
+
+
+  .radio-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .radio-inputs > * {
+    margin: 6px;
+  }
+  
+  .radio-input:checked + .radio-tile {
+    border-color: #2260ff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    color: #2260ff;
+  }
+  
+  .radio-input:checked + .radio-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: #2260ff;
+    border-color: #2260ff;
+  }
+  
+  .radio-input:checked + .radio-tile .radio-icon svg {
+    fill: #2260ff;
+  }
+  
+  .radio-input:checked + .radio-tile .radio-label {
+    color: #2260ff;
+  }
+  
+  .radio-input:focus + .radio-tile {
+    border-color: #2260ff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+  }
+  
+  .radio-input:focus + .radio-tile:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .radio-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    min-height: 80px;
+    border-radius: 0.5rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .radio-tile:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+  }
+  
+  .radio-tile:hover {
+    border-color: #2260ff;
+  }
+  
+  .radio-tile:hover:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .radio-icon svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #494949;
+  }
+  
+  .radio-label {
+    color: #707070;
+    transition: 0.375s ease;
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .radio-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+  label{
+    padding:2px;
+  }
