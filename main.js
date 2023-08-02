@@ -3,6 +3,7 @@ const path = require('path');
 const ModbusRTU = require('modbus-serial');
 
 let mainWindow;
+let isClockRunning = false;
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
@@ -23,9 +24,9 @@ function createMainWindow() {
   mainWindow.loadFile('backpage.html');
 }
 
-function startModbusCommunication() {
+function startModbusCommunication() {  
   const modbusClient = new ModbusRTU();
-  modbusClient.connectRTU('COM10', { baudRate: 9600, dataBits: 8, parity: 'none' }, (err) => {
+  modbusClient.connectRTU('COM10', { baudRate: 9600, dataBits: 8, parity: 'none' },  (err) => {
     if (err) {
       console.error('Error opening serial port:', err);
       return;
@@ -37,20 +38,51 @@ function startModbusCommunication() {
     const numRegisters = 10;
 
     setInterval(() => {
+
+      // Set a timeout of 5 seconds
+      const timeoutDuration = 1000;
+      let isTimeoutTriggered = false;
+
+      // Set a timeout to handle the case when the slave doesn't respond within the specified duration
+      const timeout = setTimeout(() => {
+        if (!isTimeoutTriggered) {
+          isTimeoutTriggered = true;
+          console.log('Timeout: No response from the slave.');
+
+          /*Stop the clock here*/
+          if(isClockRunning){
+            isClockRunning = false;
+            mainWindow.webContents.send('clock-control', isClockRunning);
+          }
+        }
+      }, timeoutDuration);
+      
+
       modbusClient.readHoldingRegisters(startAddress, numRegisters, (error, data) => {
-        if (error) {
-          console.error('Error reading holding registers:', error);
-        } else {
-          const registerValues = data.data;
-          mainWindow.webContents.send('update', registerValues);
+        clearTimeout(timeout); // Clear the timeout since the response arrived before the timeout
+
+        /*Start/Restart the clock from here*/
+        if(isClockRunning) {
+          if (error) {
+            console.error('Error reading holding registers:', error);
+          } else {
+            const registerValues = data.data;
+            mainWindow.webContents.send('update', registerValues);
+          }
+        }
+        else {
+          console.log("Clock signaled to start")
+          isClockRunning = true;
+          mainWindow.webContents.send('clock-control', isClockRunning);
         }
       });
-    }, 500);
+    }, 1000);
   });
 }
 
+
 function handleSendCommand (event, value) {
-  console.log(value)
+  console.log(value);
 }
 
 app.whenReady().then(() => {
@@ -58,11 +90,14 @@ app.whenReady().then(() => {
   createMainWindow();
   startModbusCommunication();
 
-  ipcMain.on('send-command', handleSendCommand)
+
+  ipcMain.on('send-command', handleSendCommand);
+
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createMainWindow()
+      createMainWindow();
+      sendModbusStatus();
     }
   })
 
