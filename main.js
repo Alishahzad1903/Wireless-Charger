@@ -10,8 +10,6 @@ function createMainWindow() {
     title: 'Test',
     width: 800,
     height: 600,
-    minWidth: 800,
-    height: 600,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -21,8 +19,8 @@ function createMainWindow() {
   mainWindow.setMinimumSize(800, 600);
   mainWindow.setMenu(null);
 
-  mainWindow.webContents.openDevTools();
-  mainWindow.loadFile('backpage.html');
+  //mainWindow.webContents.openDevTools();
+  mainWindow.loadFile('index.html');
 }
 
 function startModbusCommunication() {  

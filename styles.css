@@ -145,11 +145,11 @@ body .card {
   
   height: 25vh;
 
-  background-color: #2b3147 !important;
+  background-color: #292929   !important;
   /* background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%) !important; */
   
-  border: 2px solid rgb(23, 2, 2);
-  box-shadow: 12px 17px 51px rgba(173, 83, 83, 0.22);
+  /* border: 2px solid rgb(23, 2, 2); */
+  /* box-shadow: 12px 17px 51px rgba(173, 83, 83, 0.22); */
   backdrop-filter: blur(6px);
   border-radius: 20px;
   text-align: center;
@@ -190,11 +190,11 @@ body .card:active {
 }
 
 .cards1 .red {
-  background-color: #2b3147;
+  background-color: #292929 ;
 }
 
 .cards1 .blue {
-  background-color: #2b3147;
+  background-color: #292929 ;
   height: 30vh !important;
   justify-content: flex-start !important;
   padding: 12px !important;
@@ -202,7 +202,7 @@ body .card:active {
 }
 
 .cards1 .green {
-  background-color: #2b3147;
+  background-color: #292929 ;
 }
 
 .cards1 .card1 {
@@ -245,7 +245,7 @@ body .card:active {
 }
  .card2 {
   width: 100%;
-  background-color: #2b3147;
+  background-color: #292929 ;
   border-radius: 20px;
  
   transition: all .2s;
@@ -532,7 +532,8 @@ body {
 
 
 .home{
-    background: #329da8;
+  background: #121212 ;
+  /* background: #329da8; */
 
   /* background: rgb(2,0,36); */
   /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,121,9,1) 0%, rgba(124,123,123,1) 0%, rgba(105,105,105,1) 0%, rgba(1,207,242,1) 100%); */
