@@ -25,10 +25,10 @@ window.electronAPI.handlecontroller((event, registerValues) => {
 
 
 // Set the color of each column
-$('#pin').css({ background: '#646464' });
-$('#pout').css({ background: '#329da8' });
-$('#ein').css({ background: '#646464' });
-$('#eout').css({ background: '#329da8' });
+$('#pin').css({ background: '#FFC107' });
+$('#pout').css({ background: '#4caf50' });
+$('#ein').css({ background: '#9C27B0' });
+$('#eout').css({ background: '#00BCD4' });
 
 
 

@@ -9,168 +9,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <div class="container-fluid">
-      <div class="row vh-100">
-          <!-- Sidebar -->
-          <div class="col-1 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3"
-              style="background-color: #252525  ">
-              <!-- Button for Home with icon -->
-              <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="window.location.href='index.html'"><i class="fas fa-house" style="font-size: 3vw;"></i></button>
-              <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick=""><i class="fas fa-gear" style="font-size: 3vw;"></i></button>
-              <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick=""><i class="fas fa-sliders" style="font-size: 3vw;"></i></button>
-              <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick=""><i class="fas fa-circle-question" style="font-size: 3vw;"></i></button>
-          </div>
+    <div class="container-fluid">
+        <div class="row vh-100">
+            <!-- Sidebar -->
+            <div class="col-1 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3"
+                style="background-color: #252525  ">
+                <!-- Button for Home with icon -->
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="window.location.href='index.html'"><i class="fas fa-house" style="font-size: 3vw;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick=""><i class="fas fa-gear" style="font-size: 3vw;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick=""><i class="fas fa-sliders" style="font-size: 3vw;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick=""><i class="fas fa-circle-question" style="font-size: 3vw;"></i></button>
+                </div>
 
-          <!-- Main Content -->
-          <div class="col-11 col-sm-11 col-md-11 col-lg-11 home px-0" id="main-content">
-              <!-- Page header -->
-              <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
-                  <div class="p-2">
-                      <span class="lead" style="color: white;">CyberSpace</span>
-                  </div>
-                  <div class="p-2" style="width: 100%; overflow: hidden;">
-                      <hr style="border-top: 1px solid rgb(255, 255, 255);">
-                  </div>
-                  <div class="p-2 d-flex align-items-center justify-content-between">
-                      <div class="d-inline"><span style="color: white;">Hello,</span></div>
-                      <div class="d-inline"><span style="color: white;" class="font-weight-bold">Username</span></div>
-                  </div>
-                  <div class="p-2" style="height: 100%;">
-                      <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
-                          <img src="User.png" alt="#" class="rounded-circle img-fluid img-thumbnail"
-                              style="max-height: 100%; max-width: 100%;">
-                      </div>
-                  </div>
-              </div>
-              <!-- Settings Section -->
-              <div class="container" style="width: 70%; height: 95%; ">
-                  <!-- Settings Heading -->
-                  <div class="settings-heading">
-                      <h2>Settings</h2>
-                  </div>
-                  <!-- Card for Variable A -->
-                  <div class="card1 shadow">
-                      <div class="row">
-                          <div class="col name">
-                              <p style="font-size: 2vw;">Variable A</p>
-                          </div>
-                          <div class="col">
-                              <!-- Slider input for Variable X -->
-                              <div class="d-flex flex-row" style="width:100%">
-                                  <div class="p-2" style="width:80%">
-                                      <input id="myRange" class="slider" value="50" max="100" min="0"
-                                          type="range">
-                                  </div>
-                                  <div>
-                                      <!-- Display the score for Variable X -->
-                                      <div class="score" id="score">50</div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+            <!-- Main Content -->
+            <div class="col-11 col-sm-11 col-md-11 col-lg-11 home px-0" id="main-content">
+                <!-- Page header -->
+                <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
+                    <div class="p-2">
+                        <span class="lead" style="color: white;">CyberSpace</span>
+                    </div>
+                    <div class="p-2" style="width: 100%; overflow: hidden;">
+                        <hr style="border-top: 1px solid rgb(255, 255, 255);">
+                    </div>
+                    <div class="p-2 d-flex align-items-center justify-content-between">
+                        <div class="d-inline"><span style="color: white;">Hello,</span></div>
+                        <div class="d-inline"><span style="color: white;" class="font-weight-bold">Username</span></div>
+                    </div>
+                    <div class="p-2" style="height: 100%;">
+                        <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
+                            <img src="User.png" alt="#" class="rounded-circle img-fluid img-thumbnail"
+                                style="max-height: 100%; max-width: 100%;">
+                        </div>
+                    </div>
+                    </div>
+                <!-- Settings Section -->
+                <div class="container-fluid" style="width: 70%; height: 95%; ">
+                    <!-- Settings Heading -->
+                    <div class="settings-heading">
+                        <h2>Settings</h2>
+                    </div>
+                    <!-- Card for Variable A -->
+                    <div class="card1 shadow">
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;">Variable A</p>
+                            </div>
+                            <div class="col">
+                                <!-- Slider input for Variable X -->
+                                <div class="d-flex flex-row" style="width:100%">
+                                    <div class="p-2" style="width:80%">
+                                        <input id="myRange" class="slider" value="50" max="100" min="0"
+                                            type="range">
+                                    </div>
+                                    <div>
+                                        <!-- Display the score for Variable X -->
+                                        <div class="score" id="score">50</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                      <!-- Card for Variable B -->
-                      <div class="row">
-                          <div class="col name">
-                              <p style="font-size: 2vw;">Variable B</p>
-                          </div>
-                          <div class="col name">
-                              <!-- Slider input for Variable Y -->
-                              <div class="d-flex flex-row" style="width:100%">
-                                  <div class="p-2" style="width:80%">
-                                      <input id="myRange" class="slider" value="50" max="100" min="0"
-                                          type="range">
-                                  </div>
-                                  <div>
-                                      <!-- Display the score for Variable Y -->
-                                      <div class="score">100</div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                        <!-- Card for Variable B -->
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;">Variable B</p>
+                            </div>
+                            <div class="col name">
+                                <!-- Slider input for Variable Y -->
+                                <div class="d-flex flex-row" style="width:100%">
+                                    <div class="p-2" style="width:80%">
+                                        <input id="myRange" class="slider" value="50" max="100" min="0"
+                                            type="range">
+                                    </div>
+                                    <div>
+                                        <!-- Display the score for Variable Y -->
+                                        <div class="score">100</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                      <!-- Card for Variable C (Toggle) -->
-                      <div class="row">
-                          <div class="col name">
-                              <p style="font-size: 2vw;"> Variable C</p>
-                          </div>
-                          <div class="col">
-                              <!-- Checkbox for Variable A -->
-                              <input type="checkbox" class="theme-checkbox">
-                          </div>
-                      </div>
+                        <!-- Card for Variable C (Toggle) -->
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;"> Variable C</p>
+                            </div>
+                            <div class="col">
+                                <!-- Checkbox for Variable A -->
+                                <input type="checkbox" class="theme-checkbox">
+                            </div>
+                        </div>
 
-                      <!-- Card for Variable D (Toggle) -->
-                      <div class="row">
-                          <div class="col name">
-                              <p style="font-size: 2vw;"> Variable D</p>
-                          </div>
-                          <div class="col">
-                              <!-- Checkbox for Variable D -->
-                              <input type="checkbox" class="theme-checkbox">
-                          </div>
-                      </div>
+                        <!-- Card for Variable D (Toggle) -->
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;"> Variable D</p>
+                            </div>
+                            <div class="col">
+                                <!-- Checkbox for Variable D -->
+                                <input type="checkbox" class="theme-checkbox">
+                            </div>
+                        </div>
 
-                      <!-- Card for Variable E (Dropdown) -->
-                      <div class="row">
-                          <div class="col name">
-                              <p style="font-size: 2vw;"> Variable E</p>
-                          </div>
-                          <div class="col DROPDOWN">
-                              <!-- Dropdown options for Variable E -->
-                              <div class="row justify-content-between mb-4" style="width:100%;">
-                                  <div class="col">
-                                      <i class="fas fa-chart-line" style="color: #1306ff;font-size: 2em;"
-                                          onclick="toggleDropdown(4)"></i>
-                                      <!-- Dropdown content for option 1 -->
-                                      <div id="dropdown-4" class="dropdown-content">
-                                          <p>Option 1</p>
-                                          <p>Option 2</p>
-                                          <p>Option 3</p>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+                        <!-- Card for Variable E (Dropdown) -->
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;"> Variable E</p>
+                            </div>
+                            <div class="col DROPDOWN">
+                                <!-- Dropdown options for Variable E -->
+                                <div class="row justify-content-between mb-4" style="width:100%;">
+                                    <div class="col">
 
-                      <!-- Card for Variable F (Radio Buttons) -->
-                      <div class="row">
-                          <div class="col name">
-                              <p style="font-size: 2vw;"> Variable F</p>
-                          </div>
-                          <div class="col">
-                              <!-- Radio button options for Variable E -->
-                              <div class="radio-input">
+
+
+                                        <!-- <i class="fas fa-chart-line" style="color: #1306ff;font-size: 2em;"
+                                            onclick="toggleDropdown(4)"></i>
+                                        <div id="dropdown-4" class="dropdown-content">
+                                            <p>Option 1</p>
+                                            <p>Option 2</p>
+                                            <p>Option 3</p>
+                                        </div> -->
+
+                                        <div class="dropdown">
+                                            <div class="select">
+                                                <span class="selected">Option 1</span>
+                                                <div class="caret"></div>
+                                            </div>
+                                            <ul class="options">
+                                                <li>Option 1</li>
+                                                <li>Option 2</li>
+                                                <li>Option 3</li>
+                                            </ul>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+
+                                
+                            </div>
+                        </div>
+
+                        <!-- Card for Variable F (Radio Buttons) -->
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;"> Variable F</p>
+                            </div>
+                            <div class="col">
+                                <!-- Radio button options for Variable E -->
+                                <div class="radio-input">
                                 <label>
                                 <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
                                 <span>Option 1</span>
                                 </label>
                                 <label>
-                                  <input value="value-2" name="value-radio" id="value-2" type="radio">
+                                    <input value="value-2" name="value-radio" id="value-2" type="radio">
                                 <span>Option 2</span>
                                 </label>
                                 <label>
-                                  <input value="value-3" name="value-radio" id="value-3" type="radio">
+                                    <input value="value-3" name="value-radio" id="value-3" type="radio">
                                 <span>Option 3</span>
                                 </label>
                                 <span class="selection"></span>
-                              </div>
-                              
-                          </div>
-                      </div>
-
-
-
-
-
-
-
-                    
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+                                </div>                                
+                            </div>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 
@@ -179,62 +190,145 @@
  
   
 
-      // Variable to track the currently open dropdown
-    var openDropdown = null;
+    //   // Variable to track the currently open dropdown
+    // var openDropdown = null;
 
-    // Event listener for mouseover on card1 blue
-    document.querySelector(".col.DROPDOWN").addEventListener("mouseover", function() {
-        isCard1BlueHovered = true;
-    });
+    // // Event listener for mouseover on card1 blue
+    // document.querySelector(".col.DROPDOWN").addEventListener("mouseover", function() {
+    //     isCard1BlueHovered = true;
+    // });
 
-    // Event listener for mouseout on card1 blue
-    document.querySelector(".col.DROPDOWN").addEventListener("mouseout", function(event) {
-        var relatedTarget = event.relatedTarget || event.toElement;
-        if (!this.contains(relatedTarget)) {
-            isCard1BlueHovered = false;
-            hideDropdownMenus();
-        }
-    });
+    // // Event listener for mouseout on card1 blue
+    // document.querySelector(".col.DROPDOWN").addEventListener("mouseout", function(event) {
+    //     var relatedTarget = event.relatedTarget || event.toElement;
+    //     if (!this.contains(relatedTarget)) {
+    //         isCard1BlueHovered = false;
+    //         hideDropdownMenus();
+    //     }
+    // });
 
-    // Event listener for mouseout on dropdown menus
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var i = 0; i < dropdowns.length; i++) {
-        dropdowns[i].addEventListener("mouseout", function(event) {
-            var relatedTarget = event.relatedTarget || event.toElement;
-            if (!isCard1BlueHovered && !this.contains(relatedTarget)) {
-                hideDropdownMenus();
-            }
-        });
-    }
+    // // Event listener for mouseout on dropdown menus
+    // var dropdowns = document.getElementsByClassName("dropdown-content");
+    // for (var i = 0; i < dropdowns.length; i++) {
+    //     dropdowns[i].addEventListener("mouseout", function(event) {
+    //         var relatedTarget = event.relatedTarget || event.toElement;
+    //         if (!isCard1BlueHovered && !this.contains(relatedTarget)) {
+    //             hideDropdownMenus();
+    //         }
+    //     });
+    // }
 
-    // Function to hide all dropdown menus
-    function hideDropdownMenus() {
-        for (var i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].classList.remove("show");
-        }
-        openDropdown = null;
-    }
+    // // Function to hide all dropdown menus
+    // function hideDropdownMenus() {
+    //     for (var i = 0; i < dropdowns.length; i++) {
+    //         dropdowns[i].classList.remove("show");
+    //     }
+    //     openDropdown = null;
+    // }
 
-    // Function to toggle the visibility of the dropdown menu
-    function toggleDropdown(iconNumber) {
-        var dropdown = document.getElementById("dropdown-" + iconNumber);
-        if (dropdown === openDropdown) {
-            dropdown.classList.remove("show");
-            openDropdown = null;
-        } else {
-            hideDropdownMenus();
-            dropdown.classList.add("show");
-            openDropdown = dropdown;
-        }
-    }
+    // // Function to toggle the visibility of the dropdown menu
+    // function toggleDropdown(iconNumber) {
+    //     var dropdown = document.getElementById("dropdown-" + iconNumber);
+    //     if (dropdown === openDropdown) {
+    //         dropdown.classList.remove("show");
+    //         openDropdown = null;
+    //     } else {
+    //         hideDropdownMenus();
+    //         dropdown.classList.add("show");
+    //         openDropdown = dropdown;
+    //     }
+    // }
 
   
 </script>
 
 <style>
 
+.dropdown {
+    width: 80%;
+    height: 90%;
+    position: relative;
+}
 
-.dropdown-content {
+.dropdown * {
+    box-sizing: border-box;
+}
+
+.select {
+    background: #2a2f3b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1% #2a2f3b solid;
+    border-radius: 10px;
+    padding: 3%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.select-clicked {
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+
+.select:hover {
+    background: #323741;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.options {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: #323741;
+    border: 1px #363a43 solid;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    color: #9fa5b5;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 2;
+}
+
+.options li {
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background: #2a2d35;
+}
+
+.active {
+    background: #23242a;
+}
+
+.options-open {
+    display: block;
+    opacity: 1;
+}
+
+/* .dropdown-content {
   display: none;
   position: absolute;
   z-index: 999;
@@ -242,7 +336,6 @@
   padding: 10px;
   border: 1px solid #329da8;
   border-radius: 4px;
-  /* Add additional styling properties */
 }   
 
 
@@ -270,7 +363,7 @@ transition: all 0.3s ease;
 
 .show {
   display: block;
-}
+} */
 
 
 
@@ -364,6 +457,49 @@ transition: all 0.3s ease;
 
 
 <script>
+
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+
+        const select = dropdown.querySelector('.select');
+        const caret = dropdown.querySelector('.caret');
+        const options = dropdown.querySelector('.options');
+        const list = dropdown.querySelectorAll('.options li');
+        const selected = dropdown.querySelector('.selected');
+
+        select.addEventListener('click', () => {
+
+            select.classList.toggle('select-clicked');
+            caret.classList.toggle('caret-rotate');
+            options.classList.toggle('options-open');
+
+        });
+
+        list.forEach(option => {
+            
+            option.addEventListener('click', () => {
+
+                selected.innerText = option.innerText;
+                select.classList.remove('select-clicked');
+                caret.classList.remove('caret-rotate');
+                options.classList.remove('options-open');
+
+                list.forEach(option => {
+                    option.classList.remove('active');
+                });
+
+                option.classList.add('active');
+            });
+        });
+    });
+
+
+
+
+
+
+
 function updateScore() {
   const slider = document.getElementById('myRange');
   const scoreElement = document.getElementById('score');
@@ -372,3 +508,5 @@ function updateScore() {
 const slider = document.getElementById('myRange');
   slider.addEventListener('input', updateScore);
 </script>
+
+</html>

@@ -20,7 +20,7 @@ function createcurrentChart() {
     var datacurrent = {
         datasets: [{ 
             data: [0, 100-0],
-            backgroundColor: ['#329da8','#d6d4d0'],
+            backgroundColor: ['#33FF57','#d6d4d0'],
             borderWidth: 0
         }]
     };
@@ -56,23 +56,27 @@ function createcurrentChart() {
                       ctx.save();
                       const X=chart.getDatasetMeta(0).data[0].x;
                       const Y=chart.getDatasetMeta(0).data[0].y;
+                      
                       ctx.font='15px MyCustomFont2';
                       ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
-            
                       ctx.textBaseLine='bottom';
                       ctx.textAlign='left';
-                      ctx.fillText('0',left+24,Y+15);
+                      ctx.fillText('-1000',left+0.05*width,Y+15);
                       ctx.textAlign='right';
-                      ctx.fillText('100',right-15,Y+15);
+                      ctx.fillText('1000',right-0.07*width,Y+15);
+
                       ctx.font='35px MyCustomFont2';
                       ctx.textAlign='center';
                       ctx.textBaseLine='top';
-                      ctx.fillStyle = 'rgba(255, 255, 255, 1)';
                       const score=data.datasets[0].data[0];
-                      ctx.fillText(score,X,Y-5);
-                      ctx.font='25px MyCustomFont2';
+                      ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+                      ctx.fillText(score,X,Y-0.3*height);
+
+
+                      ctx.font='20px MyCustomFont2';
                       ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
-                      ctx.fillText('Current',X,Y-55);
+                      ctx.fillText('Var 2',X,Y)
+                      ctx.textAlign='center';
             
               }
               }

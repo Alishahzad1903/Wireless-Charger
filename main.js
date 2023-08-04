@@ -7,7 +7,7 @@ let isClockRunning = false;
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    title: 'Test',
+    title: 'EV Charger',
     width: 800,
     height: 600,
     webPreferences: {
@@ -19,7 +19,7 @@ function createMainWindow() {
   mainWindow.setMinimumSize(800, 600);
   mainWindow.setMenu(null);
 
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
   mainWindow.loadFile('index.html');
 }
 
