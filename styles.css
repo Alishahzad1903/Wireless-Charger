@@ -3,48 +3,46 @@
   display: none;
   position: absolute;
   z-index: 999;
-  background-color: #646464;
+  background-color: #292929;
   padding: 10px;
   border: 1px solid #329da8;
   border-radius: 4px;
   /* Add additional styling properties */
-}   
+}
 
-
+/* Styling for individual items in the drop-down */
 .dropdown-content p {
   margin: 0;
   padding: 5px;
 }
 
+/* Hover effect for drop-down items */
 .dropdown-content p:hover {
-cursor: pointer;
-font-weight: bold;
-font-size: 1.2em;
-transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
-
+/* Margin adjustment for the first item in the drop-down */
 .dropdown-content p:first-child {
   margin-top: 0;
 }
 
+/* Margin adjustment for the last item in the drop-down */
 .dropdown-content p:last-child {
   margin-bottom: 0;
 }
 
-
+/* Show class used to display the drop-down */
 .show {
   display: block;
 }
 
-
-
-
-/*spinner css*/
+/* Spinner CSS */
 .spinner-container {
   position: relative;
-  height: 80px;
-  width: 80px;
+  height: 12.5vh;
+  width: 12.5vh;
   margin: 0 auto;
 }
 
@@ -54,8 +52,6 @@ transition: all 0.3s ease;
   height: 100%;
   width: 100%;
   animation: rotate_3922 1.2s linear infinite;
-  /* background-color: #9b59b6;
-  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd); */
 }
 
 .spin-container span {
@@ -69,11 +65,9 @@ transition: all 0.3s ease;
   height: 100%;
   width: 100%;
   background-color: var(--spinner-color, #F00000);
-
-  /* background-color: #00F000; Change color here */
-  /* background-image: linear-gradient(#297d14, #00ff00); */
 }
 
+/* Blurring effects for spinner spans */
 .spin-container span:nth-of-type(1) {
   filter: blur(5px);
 }
@@ -102,17 +96,19 @@ transition: all 0.3s ease;
   border-radius: 50%;
 }
 
+/* Styling for status text */
 .status-text {
-  content: "Connected"; 
+  content: "Connected";
   position: relative;
   top: -62%;
   left: 0%;
   transform: translate(0%, 0%);
   font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-size: 1.8vh;
   color: #F00000; /* Change color here */
 }
 
+/* Keyframes animation for spinner rotation */
 @keyframes rotate_3922 {
   from {
     transform: rotate(0deg);
@@ -123,32 +119,12 @@ transition: all 0.3s ease;
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Styling for cards */
 body .card {
   box-sizing: border-box;
-  width: 31%; 
-
-  height: 26vh;
-
-  
+  width: 30%;
   height: 25vh;
-
-  background-color: #292929   !important;
-  /* background: linear-gradient(45deg, #04051dea 0%, #2b566e 100%) !important; */
-  
-  /* border: 2px solid rgb(23, 2, 2); */
-  /* box-shadow: 12px 17px 51px rgba(173, 83, 83, 0.22); */
+  background-color: #292929 !important;
   backdrop-filter: blur(6px);
   border-radius: 20px;
   text-align: center;
@@ -164,15 +140,18 @@ body .card {
   overflow: hidden;
 }
 
- body .card:hover {
+/* Hover effect for cards */
+body .card:hover {
   border: 1px solid black;
   transform: scale(1.05);
 }
 
+/* Click/active effect for cards */
 body .card:active {
   transform: scale(0.95) rotateZ(1.7deg);
-} 
+}
 
+/* Styling for canvas inside the card */
 .card canvas {
   position: absolute;
   top: 0;
@@ -181,29 +160,32 @@ body .card:active {
   height: 100%;
 }
 
-
+/* Card container for the top section */
 .cards1 {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* Styling for red card */
 .cards1 .red {
-  background-color: #292929 ;
+  background-color: #292929;
 }
 
+/* Styling for blue card */
 .cards1 .blue {
-  background-color: #292929 ;
+  background-color: #292929;
   height: 30vh !important;
   justify-content: flex-start !important;
   padding: 12px !important;
-  /* overflow: hidden; */
 }
 
+/* Styling for green card */
 .cards1 .green {
-  background-color: #292929 ;
+  background-color: #292929;
 }
 
+/* Styling for individual cards inside the container */
 .cards1 .card1 {
   display: flex;
   align-items: center;
@@ -211,67 +193,56 @@ body .card:active {
   flex-direction: column;
   text-align: center;
   height: 15vh;
-  width: calc((350px / 100vw) * 100);
+  width: 100%;
   border-radius: 10px;
   color: white;
   cursor: pointer;
   transition: 400ms;
 }
 
+/* Hover effect for individual cards, excluding blue card */
 .cards1 .card1:not(.blue):hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.01, 1.01);
 }
 
-
-
+/* Blur and scale effect for other cards on hover */
 .cards1:hover > .card1:not(:hover) {
   filter: blur(10px);
   transform: scale(0.9, 0.9);
 }
 
-
-.card3 {
-  width: calc((490px / 100vw) * 100);
-  height: calc((300px / 100vh) * 100);
-  background: rgb(107,204,152);
-  background: linear-gradient(90deg, rgba(107,204,152,1) 5%, rgba(223,223,26,1) 100%);
-
-  border-radius: 20px;
-  transition: all .3s;
-}
-
+/* Adjusting margin-bottom for rows in the container */
 .container .row {
   margin-bottom: 0;
 }
+
+/* Styling for the second card */
 .card2 {
-  width: 99%;
-  background-color: #292929 ;
+  width: 98%;
+  height: 32vh;
+  background-color: #292929;
   border-radius: 20px;
-
+  padding: 15px; /* Adjust as needed */
   transition: all .2s;
-  }
+}
 
+/* Hover effect for the second card */
 .card2:hover {
-  transform: scale(0.98);
+  transform: scale(0.99);
   border-radius: 20px;
 }
 
-.card3:hover {
-  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
-}
-
-
-
-
+/* Styling for the timer section */
 .timer {
-  font-size: 30px;
+  font-size: 3vw;
   font-family: MyCustomFont, Arial, sans-serif;
-  
   text-align: center;
-  margin-top: 50px;
+  color: #329da8; 
+  margin:auto;
   transition: color 0.3s ease-in-out;
 }
 
+/* Animation for new-second class */
 .timer.new-second {
   animation: scale-in 0.3s ease-in-out;
 }
@@ -285,6 +256,7 @@ body .card:active {
   }
 }
 
+/* Animation for timer-change class */
 .timer.timer-change {
   animation: fade 0.3s ease-in-out;
 }
@@ -298,6 +270,7 @@ body .card:active {
   }
 }
 
+/* Font-face declarations for custom fonts */
 @font-face {
   font-family: MyCustomFont;
   src: url('/Users/ali/Library/Fonts/Technology-BoldItalic.ttf');
@@ -310,235 +283,12 @@ body .card:active {
   src: url("C:/Users/PC/AppData/Local/Microsoft/Windows/Fonts/NotoSansJP-VariableFont_wght.ttf");
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-  background: #2B2C31;
+/* Styling for the home section */
+.home {
+  background: #121212;
 }
 
-.centerer {
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  margin-top: -140px;
-}
-
-
-.window {
-  display: flex;
-  justify-content: center;
-  font-size: 18px;
-  font-family: 'Quicksand', sans-serif;
-}
-
-.flex-cont {
-  height: 280px;
-  width: 500px;
-  position: absolute;
-}
-
-.title{
-  line-height: 20px;
-  position: absolute;
-  font-weight: 300;
-  color: #DB728D;
-}
-
-.site-name {
-  font-weight: 400;
-  color: #FFA8D2;
-  padding: 5px 12px 5px 12px;
-  background-color: #333333;
-  border-radius: 30px;
-  box-shadow: 0px 0px 50px #111111;
-  margin-left: 3px;
-}
-
-.columns {
-  margin: 0px;
-  top: 60px;
-  position: absolute;
-}
-
-.name-column {
-  position: absolute;
-  white-space: nowrap;
-}
-
-.name {
-  color: #AAAAAF;
-  line-height: 50px;
-  font-weight: 400;
-}
-
-.name ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.bar-column {
-  left: 140px;
-  top: 38px;
-  position: absolute;
-  display: inline-block;
-}
-
-.bar {
-  height: 8px;
-  width: 260px;
-  border-radius: 4px;
-  background-color: #484B53;
-  position: absolute;
-}
-
-.fill {
-  height: 8px;
-  border-radius: 4px;
-  background-color: #FF8095;
-  box-shadow: 0px 0px 30px #FF2AA6;
-  position: absolute;
-}
-
-.fill-u {
-  width: 180px;
-  animation-name: filling-u;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: initial;
-}
-
-@keyframes filling-u {
-  0% {
-    box-shadow: 0px 0px 0px #FF2AA6;
-    width: 0px;
-  }
-  100% {
-    box-shadow: 0px 0px 30px #FF2AA6;
-    width: 180px;
-  }
-}
-
-.c-bar-p {
-  margin-top: 50px;
-}
-
-.fill-p {
-  width: 198px;
-  animation-name: filling-p;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: initial;
-}
-
-@keyframes filling-p {
-  0% {
-    box-shadow: 0px 0px 0px #FF2AA6;
-    width: 0px;
-  }
-  100% {
-    box-shadow: 0px 0px 30px #FF2AA6;
-    width: 198px;
-  }
-}
-  
-.c-bar-ns {
-  margin-top: 100px;
-}
-
-.fill-ns {
-  width: 130px;
-  animation-name: filling-ns;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: initial;
-}
-
-@keyframes filling-ns {
-  0% {
-    box-shadow: 0px 0px 0px #FF2AA6;
-    width: 0px;
-  }
-  100% {
-    box-shadow: 0px 0px 30px #FF2AA6;
-    width: 130px;
-  }
-}
-
-.c-bar-br {
-  margin-top: 150px;
-}
-
-.fill-br {
-  width: 190px;
-  animation-name: filling-br;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: initial;
-}
-
-@keyframes filling-br {
-  0% {
-    box-shadow: 0px 0px 0px #FF2AA6;
-    width: 0px;
-  }
-  100% {
-    box-shadow: 0px 0px 30px #FF2AA6;
-    width: 190px;
-  }
-}
-
-.num-column {
-  left: 430px;
-  position: absolute;
-}
-
-.number {
-  color: #727681;
-  line-height: 50px;
-  font-weight: 300;
-  animation-name: fade-in;
-  animation-duration: 2s;
-  animation-delay: 0s;
-  animation-iteration-count: initial;
-}
-
-.number ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-.home{
-  background: #121212 ;
-  /* background: #329da8; */
-
-  /* background: rgb(2,0,36); */
-  /* background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,121,9,1) 0%, rgba(124,123,123,1) 0%, rgba(105,105,105,1) 0%, rgba(1,207,242,1) 100%); */
-}
-
+/* Styling for the link button */
 .btn-link {
   transition: transform 0.3s ease-in-out;
 }
@@ -547,67 +297,61 @@ body {
   transform: scale(1.25);
   box-shadow: none !important;
   outline: 0 !important;
-
 }
 .btn-link .active {
-  color: #329da8  !important; /* Change this to the color you want */
+  color: #329da8 !important; /* Change this to the color you want */
 }
 
-
+/* Styling for meta-info section */
 .meta-info {
   background-color: black;
-   /* Set the desired height for the upper row */
 }
 
+/* Styling for images inside meta-info section */
 .meta-info img {
-max-height: 100%;
-object-fit: contain;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-
-
-
-.card2 {
-padding: 15px; /* adjust as needed */
-}
-
+/* Styling for the outer-wrapper */
 .outer-wrapper {
-background: transparent;
-width: 100%;  /* Adjust as needed */
-
+  background: transparent;
+  width: 100%; /* Adjust as needed */
 }
 
+/* Styling for the column-wrapper */
 .column-wrapper {
-height: 20px;
-border-radius: 0px;
-width: 70%; /* Adjust as needed */
-background: #E0E0E0;
+  height: 20px;
+  border-radius: 0px;
+  width: 70%; /* Adjust as needed */
+  background: #E0E0E0;
 }
 
+/* Styling for the column */
 .column {
-width: 0%;
-border-radius: 0px;
-height: 100%;
-background: #90A4AE;
+  width: 0%;
+  border-radius: 0px;
+  height: 100%;
+  background: #90A4AE;
 }
 
+/* Styling for the percentage */
 .percentage {
-color: rgba(255, 255, 255, 1);
-font-family: MyCustomFont2;
-background: transparent;
-padding: 5px 10px;
-border-radius: 4px;
-text-align: center;
-margin-left: 10px;
-width: 10%;  /* Adjust as needed */
+  color: rgba(255, 255, 255, 1);
+  font-family: MyCustomFont2;
+  background: transparent;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  margin-left: 10px;
+  width: 10%; /* Adjust as needed */
 }
 
+/* Styling for the label */
 .label {
-color: rgba(255, 255, 255, 1);
-font-family: MyCustomFont2;
-font-size: 20px; /* Adjust as needed */
-
-margin-right: 10px;
-width: 10%;  /* Adjust as needed */
+  color: rgba(255, 255, 255, 1);
+  font-family: MyCustomFont2;
+  font-size: 20px; /* Adjust as needed */
+  margin-right: 10px;
+  width: 10%; /* Adjust as needed */
 }
-
