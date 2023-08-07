@@ -16,9 +16,9 @@
                 style="background-color: #252525  ">
                 <!-- Button for Home with icon -->
                 <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="window.location.href='index.html'"><i class="fas fa-house" style="font-size: 3vw;"></i></button>
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick=""><i class="fas fa-sliders" style="font-size: 3vw;"></i></button>
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'"><i class="fas fa-gear" style="font-size: 3vw;"></i></button>
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick=""><i class="fas fa-circle-question" style="font-size: 3vw;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick="window.location.href='backpage.html'"><i class="fas fa-sliders" style="font-size: 3vw;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick=""><i class="fas fa-gear" style="font-size: 3vw;"></i></button>
+                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick="window.location.href='about.html'"><i class="fas fa-circle-question" style="font-size: 3vw;"></i></button>
                 </div>
 
             <!-- Main Content -->
@@ -46,25 +46,25 @@
                 <div class="container-fluid" style="width: 70%; height: 95%; ">
                     <!-- Settings Heading -->
                     <div class="settings-heading">
-                        <h2>Settings</h2>
+                        <h2>Connection Settings</h2>
                     </div>
-                    <!-- Card for Variable A -->
+
                     <div class="card1 shadow">
                         <div class="row">
                             <div class="col name">
-                                <p style="font-size: 2vw;">Variable A</p>
+                                <p style="font-size: 2vw;">Port</p>
                             </div>
                             <div class="col">
-                                <!-- Slider input for Variable X -->
-                                <div class="d-flex flex-row" style="width:100%">
-                                    <div class="p-2" style="width:80%">
-                                        <input id="myRange" class="slider" value="50" max="100" min="0"
-                                            type="range">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span class="selected">Option 1</span>
+                                        <div class="caret"></div>
                                     </div>
-                                    <div>
-                                        <!-- Display the score for Variable X -->
-                                        <div class="score" id="score">50</div>
-                                    </div>
+                                    <ul class="options">
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -72,19 +72,19 @@
                         <!-- Card for Variable B -->
                         <div class="row">
                             <div class="col name">
-                                <p style="font-size: 2vw;">Variable B</p>
+                                <p style="font-size: 2vw;">Braud Rate</p>
                             </div>
-                            <div class="col name">
-                                <!-- Slider input for Variable Y -->
-                                <div class="d-flex flex-row" style="width:100%">
-                                    <div class="p-2" style="width:80%">
-                                        <input id="myRange1" class="slider" value="50" max="100" min="0"
-                                            type="range">
+                            <div class="col">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span class="selected">Option 1</span>
+                                        <div class="caret"></div>
                                     </div>
-                                    <div>
-                                        <!-- Display the score for Variable Y -->
-                                        <div class="score" id="score1">50</div>
-                                    </div>
+                                    <ul class="options">
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -92,10 +92,9 @@
                         <!-- Card for Variable C (Toggle) -->
                         <div class="row">
                             <div class="col name">
-                                <p style="font-size: 2vw;"> Variable C</p>
+                                <p style="font-size: 2vw;">Parity</p>
                             </div>
                             <div class="col">                                
-                                <!-- Dropdown options for Variable E -->
                                 <div class="dropdown">
                                     <div class="select">
                                         <span class="selected">Option 1</span>
@@ -113,49 +112,25 @@
                         <!-- Card for Variable D (Toggle) -->
                         <div class="row">
                             <div class="col name">
-                                <p style="font-size: 2vw;"> Variable D</p>
+                                <p style="font-size: 2vw;">Slave ID</p>
                             </div>
                             <div class="col">
                                 <!-- Checkbox for Variable D -->
-                                <input type="checkbox" class="theme-checkbox">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span class="selected">Option 1</span>
+                                        <div class="caret"></div>
+                                    </div>
+                                    <ul class="options">
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Card for Variable E (Dropdown) -->
-                        <div class="row">
-                            <div class="col name">
-                                <p style="font-size: 2vw;"> Variable E</p>
-                            </div>
-                            <div class="col">
-                                <!-- Checkbox for Variable A -->
-                                <input type="checkbox" class="theme-checkbox">                                
-                            </div>
-                        </div>
-
-                        <!-- Card for Variable F (Radio Buttons) -->
-                        <div class="row">
-                            <div class="col name">
-                                <p style="font-size: 2vw;"> Variable F</p>
-                            </div>
-                            <div class="col">
-                                <!-- Radio button options for Variable F -->
-                                <div class="radio-input">
-                                <label>
-                                <input value="value-1" name="value-radio" id="value-1" type="radio" checked="">
-                                <span>Option 1</span>
-                                </label>
-                                <label>
-                                    <input value="value-2" name="value-radio" id="value-2" type="radio">
-                                <span>Option 2</span>
-                                </label>
-                                <label>
-                                    <input value="value-3" name="value-radio" id="value-3" type="radio">
-                                <span>Option 3</span>
-                                </label>
-                                <span class="selection"></span>
-                                </div>                                
-                            </div>
-                        </div>                    
+                  
                     </div>
                 </div>
             </div>
