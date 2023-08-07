@@ -288,7 +288,7 @@ body .card:active {
   background: #121212;
 }
 
-/* Styling for the link button */
+/* Styling for the link button
 .btn-link {
   transition: transform 0.3s ease-in-out;
 }
@@ -300,7 +300,7 @@ body .card:active {
 }
 .btn-link .active {
   color: #329da8 !important; /* Change this to the color you want */
-}
+/* } */ 
 
 /* Styling for meta-info section */
 .meta-info {
@@ -355,3 +355,15 @@ body .card:active {
   margin-right: 10px;
   width: 10%; /* Adjust as needed */
 }
+
+
+
+  /* CSS to hide the radio buttons */
+  .btn input[type="radio"] {
+    display: none;
+  }
+
+  .btn.selected i {
+    transform: scale(1.2); /* Increase the scale value as needed for desired enlargement */
+  }
+
