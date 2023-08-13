@@ -58,6 +58,13 @@ function createvoltageChart() {
           ctx.save();
           const X=chart.getDatasetMeta(0).data[0].x;
           const Y=chart.getDatasetMeta(0).data[0].y;
+
+          ctx.beginPath();
+          ctx.moveTo(X, top);
+          ctx.lineTo(X, top+30);
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)';
+          ctx.stroke();
           
           ctx.font='15px MyCustomFont2';
           ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
