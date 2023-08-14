@@ -7,7 +7,7 @@ let isClockRunning = false;
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    title: 'EV Charger',
+    title: 'Wireless EV Charger',
     width: 800,
     height: 600,
     webPreferences: {
@@ -19,8 +19,12 @@ function createMainWindow() {
   mainWindow.setMinimumSize(800, 600);
   mainWindow.setMenu(null);
 
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
   mainWindow.loadFile('index.html');
+
+  mainWindow.webContents.on('did-finish-load', () => {
+    mainWindow.webContents.send('connection-control', isClockRunning);
+  });
 }
 
 function startModbusCommunication() {  
@@ -71,7 +75,10 @@ function startModbusCommunication() {
         else {
           console.log("Clock signaled to start")
           isClockRunning = true;
-          mainWindow.webContents.send('connection-control', isClockRunning);
+          mainWindow.webContents.send('connection-control', isClockRunning); //this event is not executed on load
+
+          
+
         }
       });
       
@@ -85,6 +92,7 @@ function handleSendCommand (event, value) {
 
   /* Write  */
 }
+
 
 app.whenReady().then(() => {
 

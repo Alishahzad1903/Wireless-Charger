@@ -1,4 +1,3 @@
-window.onload = function() {
   var timerElement = document.querySelector('.timer');
   var startTime;
   var elapsedTime = 0;
@@ -49,7 +48,7 @@ window.onload = function() {
     if (signal == false) {
       stopTimer();
       //change color to gray
-      document.querySelector(".status-text").style.color = "#F00000";
+      document.querySelector(".status-text").style.color = "#d6d4d0";
       document.querySelector(".spin-container").style.setProperty("--spinner-color", "#F00000");
 
     } else {
@@ -61,5 +60,3 @@ window.onload = function() {
 
     } 
   });
-
-};
