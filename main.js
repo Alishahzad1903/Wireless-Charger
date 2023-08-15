@@ -75,10 +75,7 @@ function startModbusCommunication() {
         else {
           console.log("Clock signaled to start")
           isClockRunning = true;
-          mainWindow.webContents.send('connection-control', isClockRunning); //this event is not executed on load
-
-          
-
+          mainWindow.webContents.send('connection-control', isClockRunning);
         }
       });
       
