@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html>
 <head>
   <link rel="stylesheet" href="backstyle.css">
@@ -208,19 +207,19 @@
 
 
 
-function updateScore() {
-  const slider = document.getElementById('myRange');
-  const slider1 = document.getElementById('myRange1');
-  const scoreElement = document.getElementById('score');
-  const scoreElement1 = document.getElementById('score1');
-  scoreElement.textContent = slider.value;
-  scoreElement1.textContent = slider1.value;
-}
-const slider = document.getElementById('myRange');
-const slider1 = document.getElementById('myRange1');
+    function updateScore() {
+        const slider = document.getElementById('myRange');
+        const slider1 = document.getElementById('myRange1');
+        const scoreElement = document.getElementById('score');
+        const scoreElement1 = document.getElementById('score1');
+        scoreElement.textContent = slider.value;
+        scoreElement1.textContent = slider1.value;
+    }
+    const slider = document.getElementById('myRange');
+    const slider1 = document.getElementById('myRange1');
 
-slider.addEventListener('input', updateScore);
-slider1.addEventListener('input', updateScore);
+    slider.addEventListener('input', updateScore);
+    slider1.addEventListener('input', updateScore);
 
 
 </script>

@@ -48,7 +48,7 @@
     if (signal == false) {
       stopTimer();
       //change color to gray
-      document.querySelector(".status-text").style.color = "#d6d4d0";
+      document.querySelector(".status-text").style.color = "#d6d4d02d";
       document.querySelector(".spin-container").style.setProperty("--spinner-color", "#F00000");
 
     } else {

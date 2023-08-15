@@ -69,20 +69,13 @@
 
 /* Blurring effects for spinner spans */
 .spin-container span:nth-of-type(1) {
-  filter: blur(5px);
+  filter: blur(3px);
 }
 
 .spin-container span:nth-of-type(2) {
-  filter: blur(10px);
+  filter: blur(15px);
 }
 
-.spin-container span:nth-of-type(3) {
-  filter: blur(25px);
-}
-
-.spin-container span:nth-of-type(4) {
-  filter: blur(50px);
-}
 
 .spin-container::after {
   content: "";
@@ -91,8 +84,7 @@
   left: 10px;
   right: 10px;
   bottom: 10px;
-  background-color: #fff;
-  border: solid 5px #ffffff;
+  background-color: #292929;
   border-radius: 50%;
 }
 
@@ -105,7 +97,7 @@
   transform: translate(0%, 0%);
   font-family: Arial, sans-serif;
   font-size: 1.8vh;
-  color: #d6d4d0; /* Change color here */
+  color: #d6d4d02d/* Change color here */
 }
 
 /* Keyframes animation for spinner rotation */
