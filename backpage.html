@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-
 <html>
 <head>
   <link rel="stylesheet" href="backstyle.css">
@@ -46,7 +45,7 @@
                 <div class="container-fluid" style="width: 70%; height: 95%; ">
                     <!-- Settings Heading -->
                     <div class="settings-heading">
-                        <h2>Settings</h2>
+                        <h2>Device Settings</h2>
                     </div>
                     <!-- Card for Variable A -->
                     <div class="card1 shadow">
@@ -89,7 +88,7 @@
                             </div>
                         </div>
 
-                        <!-- Card for Variable C (Toggle) -->
+                        <!-- Card for Variable C (Dropdown) -->
                         <div class="row">
                             <div class="col name">
                                 <p style="font-size: 2vw;"> Variable C</p>
@@ -121,7 +120,7 @@
                             </div>
                         </div>
 
-                        <!-- Card for Variable E (Dropdown) -->
+                        <!-- Card for Variable E (Toggle) -->
                         <div class="row">
                             <div class="col name">
                                 <p style="font-size: 2vw;"> Variable E</p>
@@ -208,19 +207,19 @@
 
 
 
-function updateScore() {
-  const slider = document.getElementById('myRange');
-  const slider1 = document.getElementById('myRange1');
-  const scoreElement = document.getElementById('score');
-  const scoreElement1 = document.getElementById('score1');
-  scoreElement.textContent = slider.value;
-  scoreElement1.textContent = slider1.value;
-}
-const slider = document.getElementById('myRange');
-const slider1 = document.getElementById('myRange1');
+    function updateScore() {
+        const slider = document.getElementById('myRange');
+        const slider1 = document.getElementById('myRange1');
+        const scoreElement = document.getElementById('score');
+        const scoreElement1 = document.getElementById('score1');
+        scoreElement.textContent = slider.value;
+        scoreElement1.textContent = slider1.value;
+    }
+    const slider = document.getElementById('myRange');
+    const slider1 = document.getElementById('myRange1');
 
-slider.addEventListener('input', updateScore);
-slider1.addEventListener('input', updateScore);
+    slider.addEventListener('input', updateScore);
+    slider1.addEventListener('input', updateScore);
 
 
 </script>
