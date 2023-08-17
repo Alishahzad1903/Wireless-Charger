@@ -95,7 +95,7 @@
                     <!-- Dropdowns for gauge options -->
                     <div class="row justify-content-between pb-2 pt-2">
                       <div class="col">
-                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(1)"></i>
+                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(1)" id="icon-gauge"></i>
                         <div id="dropdown-1" class="dropdown-content">
                           <p>Voltage</p>
                           <p>Current</p>
@@ -103,7 +103,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(2)"></i>
+                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(2)"  id="icon-gaugecurrent"></i>
                         <div id="dropdown-2" class="dropdown-content">
                           <p>Current</p>
                           <p>Voltage</p>
@@ -111,7 +111,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(3)"></i>
+                        <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(3)" id="icon-gaugeresistance"></i>
                         <div id="dropdown-3" class="dropdown-content">
                           <p>Resistance</p>
                           <p>Voltage</p>
@@ -122,7 +122,7 @@
                     <!-- Dropdowns for chart options -->
                     <div class="row justify-content-between pb-2 pt-2">
                       <div class="col">
-                        <i class="fas fa-chart-line" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(4)"></i>
+                        <i class="fas fa-chart-line" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(4)"  id="Icon-4"></i>
                         <div id="dropdown-4" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -130,7 +130,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(5)"></i>
+                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(5)"  id="Icon-5"></i>
                         <div id="dropdown-5" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -138,7 +138,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(6)"></i>
+                        <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(6)"  id="Icon-6"></i>
                         <div id="dropdown-6" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -149,7 +149,7 @@
                     <!-- Dropdowns for bar chart options -->
                     <div class="row justify-content-between pb-2 pt-2">
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(7)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(7)" id="Bar-7"></i>
                         <div id="dropdown-7" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -157,7 +157,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(8)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(8)" id="Bar-8"></i>
                         <div id="dropdown-8" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -165,7 +165,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(9)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(9)" id="Bar-9"></i>
                         <div id="dropdown-9" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -173,7 +173,7 @@
                         </div>
                       </div>
                       <div class="col">
-                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(10)"></i>
+                        <i class="fas fa-chart-bar" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(10)" id="Bar-10"></i>
                         <div id="dropdown-10" class="dropdown-content">
                           <p>1</p>
                           <p>2</p>
@@ -210,29 +210,29 @@
                     <!-- Additional data for power and energy -->
                     <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">P<sub>in</sub></div>
-                      <div class="column-wrapper">
-                        <div class="column" id="pin"></div>
+                      <div class="columnbar-wrapper">
+                        <div class="columnbar" id="pin"></div>
                       </div>
                       <div class="percentage" id="p1">--</div>
                     </div>
                     <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">P<sub>out</sub></div>
-                      <div class="column-wrapper">
-                        <div class="column" id="pout"></div>
+                      <div class="columnbar-wrapper">
+                        <div class="columnbar" id="pout"></div>
                       </div>
                       <div class="percentage" id="p2">--</div>
                     </div>
                     <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">E<sub>in</sub></div>
-                      <div class="column-wrapper">
-                        <div class="column" id="ein"></div>
+                      <div class="columnbar-wrapper">
+                        <div class="columnbar" id="ein"></div>
                       </div>
                       <div class="percentage" id="p3">--</div>
                     </div>
                     <div class="outer-wrapper d-flex align-items-center justify-content-between mb-2 mt-2" style="height: 5vh;">
                       <div class="label">E<sub>out</sub></div>
-                      <div class="column-wrapper">
-                        <div class="column" id="eout"></div>
+                      <div class="columnbar-wrapper">
+                        <div class="columnbar" id="eout"></div>
                       </div>
                       <div class="percentage" id="p4">--</div>
                     </div>
@@ -245,7 +245,104 @@
       </div>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const barGaugeIcons = document.querySelectorAll('[id^="Bar-"] ');
+      const barGaugeBars = document.querySelectorAll('.columnbar-wrapper');
+      const newBarGaugeColors = [
+        "#FF5733",    // Color for the first bar gauge icon
+        "#33FF57",    // Color for the second bar gauge icon
+        "#3373FF", 
+        "#3373FF"   // Color for the third bar gauge icon
+        // Add more colors as needed for other icons
+      ];
 
+      barGaugeIcons.forEach((icon, index) => {
+        const iconOriginalColor = window.getComputedStyle(icon).color;
+
+        icon.addEventListener("mouseenter", () => {
+          icon.style.color = newBarGaugeColors[index];
+          barGaugeBars[index].classList.add("hovere");
+        });
+
+        icon.addEventListener("mouseleave", () => {
+          icon.style.color = iconOriginalColor;
+          barGaugeBars[index].classList.remove("hovere");
+        });
+      });
+
+
+
+
+
+
+      const icons = document.querySelectorAll('[id^="Icon-"]');
+      const newIconColors = [
+    "#FFD700" ,
+    "#00FF7F ",
+    "#1E90FF" 
+        // Add more colors as needed for other icons
+      ];
+      const tooltipTexts = [
+        'Line 1', // Tooltip text for the first icon
+        'Line 2', // Tooltip text for the second icon
+        'Line 3'  // Tooltip text for the third icon
+        // Add more tooltip texts as needed
+      ];
+    
+      const gaugeIcons = document.querySelectorAll('[id^="icon-gauge"]');
+      const gaugeCards = document.querySelectorAll('.card');
+      const newGaugeColors = [
+        "#FF5733",    // Color for the first gauge icon
+        "#33FF57",    // Color for the second gauge icon
+        "#3373FF"     // Color for the third gauge icon
+        // Add more colors as needed for other icons
+      ];
+    
+      icons.forEach((icon, index) => {
+        const iconOriginalColor = window.getComputedStyle(icon).color;
+    
+        icon.addEventListener("mouseenter", () => {
+          icon.style.color = newIconColors[index];
+          icon.setAttribute('data-original-color', iconOriginalColor);
+          icon.setAttribute('title', tooltipTexts[index]);
+        });
+    
+        icon.addEventListener("mouseleave", () => {
+          icon.style.color = iconOriginalColor;
+          icon.removeAttribute('title');
+        });
+      });
+    
+      gaugeIcons.forEach((icon, index) => {
+        const iconOriginalColor = window.getComputedStyle(icon).color;
+    
+        icon.addEventListener("mouseenter", () => {
+          icon.style.color = newGaugeColors[index];
+          gaugeCards[index].classList.add("hovere");
+        });
+    
+        icon.addEventListener("mouseleave", () => {
+          icon.style.color = iconOriginalColor;
+          gaugeCards[index].classList.remove("hovere");
+        });
+      });
+    });
+    </script>
+    
+    
+  
+  <style>
+
+    
+    .hovere {
+  /* Remove default background-color to let the inline style take over */
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+  transition: transform 0.3s ease-out;
+  /* Add any other styling you want for the hovered card */
+}
+  </style>
   <!-- JavaScript scripts -->
   <script src="SendCommand.js"></script>
   <script src="HomeDropDown.js"></script>

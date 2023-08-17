@@ -73,7 +73,13 @@ const config = {
         },
         plugins: {
             legend: {
-                display: false
+                position:'bottom',
+                display: true, // Set to true to display the legend
+                labels: {
+                    font: {
+                        size: 14 // Adjust the font size for the legend labels
+                    }
+                }
             },
             tooltip: {
                 enabled: true
