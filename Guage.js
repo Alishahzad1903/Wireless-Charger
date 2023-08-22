@@ -52,6 +52,7 @@ function createvoltageChart() {
   }
 
   var guaguecharttext={
+
     id:'guaguecharttext',
     afterDatasetsDraw(chart,args,pluginOptions){
       const{ctx,data,chartArea:{top,bottom,left,right,width,height},scales:{r}}=chart;
@@ -66,6 +67,7 @@ function createvoltageChart() {
       ctx.fillText('-1000',left-0.03*width,Y+15);
       ctx.textAlign='right';
       ctx.fillText('1000',right+0.02*width,Y+15);
+
 
       ctx.font='40px MyCustomFont2';
       ctx.textAlign='center';

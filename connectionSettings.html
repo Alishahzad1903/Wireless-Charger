@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+
+
 <html>
 <head>
   <link rel="stylesheet" href="backstyle.css">
@@ -47,7 +49,6 @@
                         <h2>Connection Settings</h2>
                     </div>
 
-                    <!-- Card for Variable A (Dropdown) -->
                     <div class="card1 shadow">
                         <div class="row">
                             <div class="col name">
@@ -56,19 +57,19 @@
                             <div class="col">
                                 <div class="dropdown">
                                     <div class="select">
-                                        <span class="selected">COM 10</span>
+                                        <span class="selected">Option 1</span>
                                         <div class="caret"></div>
                                     </div>
                                     <ul class="options">
-                                        <li>COM 10</li>
-                                        <li></li>
-                                        <li></li>
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card for Variable B (Dropdown) -->
+                        <!-- Card for Variable B -->
                         <div class="row">
                             <div class="col name">
                                 <p style="font-size: 2vw;">Braud Rate</p>
@@ -76,19 +77,76 @@
                             <div class="col">
                                 <div class="dropdown">
                                     <div class="select">
-                                        <span class="selected">9600</span>
+                                        <span class="selected">Option 1</span>
                                         <div class="caret"></div>
                                     </div>
                                     <ul class="options">
-                                        <li>9600</li>
-                                        <li></li>
-                                        <li></li>
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card for Variable C (Dropdown) -->
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;">Braud Rate</p>
+                            </div>
+                            <div class="col">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span class="selected">Option 1</span>
+                                        <div class="caret"></div>
+                                    </div>
+                                    <ul class="options">
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;">Braud Rate</p>
+                            </div>
+                            <div class="col">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span class="selected">Option 1</span>
+                                        <div class="caret"></div>
+                                    </div>
+                                    <ul class="options">
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col name">
+                                <p style="font-size: 2vw;">Braud Rate</p>
+                            </div>
+                            <div class="col">
+                                <div class="dropdown">
+                                    <div class="select">
+                                        <span class="selected">Option 1</span>
+                                        <div class="caret"></div>
+                                    </div>
+                                    <ul class="options">
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card for Variable C (Toggle) -->
                         <div class="row">
                             <div class="col name">
                                 <p style="font-size: 2vw;">Parity</p>
@@ -96,19 +154,19 @@
                             <div class="col">                                
                                 <div class="dropdown">
                                     <div class="select">
-                                        <span class="selected">None</span>
+                                        <span class="selected">Option 1</span>
                                         <div class="caret"></div>
                                     </div>
                                     <ul class="options">
-                                        <li>None</li>
-                                        <li>Even</li>
-                                        <li>Odd</li>
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Card for Variable D (Dropdown) -->
+                        <!-- Card for Variable D (Toggle) -->
                         <div class="row">
                             <div class="col name">
                                 <p style="font-size: 2vw;">Slave ID</p>
@@ -117,18 +175,19 @@
                                 <!-- Checkbox for Variable D -->
                                 <div class="dropdown">
                                     <div class="select">
-                                        <span class="selected">1</span>
+                                        <span class="selected">Option 1</span>
                                         <div class="caret"></div>
                                     </div>
                                     <ul class="options">
-                                        <li>1</li>
-                                        <li>2</li>
-                                        <li>3</li>
+                                        <li>Option 1</li>
+                                        <li>Option 2</li>
+                                        <li>Option 3</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
+                  
                     </div>
                 </div>
             </div>
@@ -181,19 +240,19 @@
 
 
 
-    function updateScore() {
-    const slider = document.getElementById('myRange');
-    const slider1 = document.getElementById('myRange1');
-    const scoreElement = document.getElementById('score');
-    const scoreElement1 = document.getElementById('score1');
-    scoreElement.textContent = slider.value;
-    scoreElement1.textContent = slider1.value;
-    }
-    const slider = document.getElementById('myRange');
-    const slider1 = document.getElementById('myRange1');
+function updateScore() {
+  const slider = document.getElementById('myRange');
+  const slider1 = document.getElementById('myRange1');
+  const scoreElement = document.getElementById('score');
+  const scoreElement1 = document.getElementById('score1');
+  scoreElement.textContent = slider.value;
+  scoreElement1.textContent = slider1.value;
+}
+const slider = document.getElementById('myRange');
+const slider1 = document.getElementById('myRange1');
 
-    slider.addEventListener('input', updateScore);
-    slider1.addEventListener('input', updateScore);
+slider.addEventListener('input', updateScore);
+slider1.addEventListener('input', updateScore);
 
 
 </script>

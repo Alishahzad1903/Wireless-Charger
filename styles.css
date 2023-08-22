@@ -116,7 +116,7 @@ body .card {
   box-sizing: border-box;
   width: 30%;
   height: 25vh;
-  background-color: #292929 !important;
+  background-color: #292929 ;
   backdrop-filter: blur(6px);
   border-radius: 20px;
   text-align: center;
@@ -265,13 +265,13 @@ body .card:active {
 /* Font-face declarations for custom fonts */
 @font-face {
   font-family: MyCustomFont;
-  src: url('/Users/ali/Library/Fonts/Technology-BoldItalic.ttf');
+  src: url('C:\Users\alish\OneDrive\Documents\GitHub\Wireless-Charger\technology\Technology-BoldItalic.ttf');
   src: url("C:/Users/PC/AppData/Local/Microsoft/Windows/Fonts/Technology-BoldItalic.ttf");
 }
 
 @font-face {
   font-family: MyCustomFont2;
-  src: url('/Users/ali/Library/Fonts/NotoSansJP-VariableFont_wght.ttf');
+  src: url("C:\Users\alish\OneDrive\Documents\GitHub\Wireless-Charger\Noto_Sans_JP\NotoSansJP-VariableFont_wght.ttf");
   src: url("C:/Users/PC/AppData/Local/Microsoft/Windows/Fonts/NotoSansJP-VariableFont_wght.ttf");
 }
 
@@ -312,7 +312,7 @@ body .card:active {
 }
 
 /* Styling for the column-wrapper */
-.column-wrapper {
+.columnbar-wrapper {
   height: 20px;
   border-radius: 0px;
   width: 70%; /* Adjust as needed */
@@ -320,7 +320,7 @@ body .card:active {
 }
 
 /* Styling for the column */
-.column {
+.columnbar {
   width: 0%;
   border-radius: 0px;
   height: 100%;
