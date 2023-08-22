@@ -69,21 +69,21 @@
 
 /* Blurring effects for spinner spans */
 .spin-container span:nth-of-type(1) {
-  filter: blur(3px);
+  filter: blur(1px);
 }
 
 .spin-container span:nth-of-type(2) {
-  filter: blur(15px);
+  filter: blur(10px);
 }
 
 
 .spin-container::after {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
   background-color: #292929;
   border-radius: 50%;
 }
@@ -145,7 +145,7 @@ body .card:active {
 
 /* Styling for canvas inside the card */
 .card canvas {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
