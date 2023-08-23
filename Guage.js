@@ -30,7 +30,7 @@ function createvoltageChart() {
     rotation: 270,
     circumference: 180,
     responsive: true,
-    maintainAspectRatio: true,  //Add this line to make the chart responsive
+    maintainAspectRatio: true, 
     borderWidth: 1,
     cutout: '90%',
     plugins: {
