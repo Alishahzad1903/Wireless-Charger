@@ -8,7 +8,7 @@ let isClockRunning = false;
 function createMainWindow() {
   mainWindow = new BrowserWindow({
     title: 'Wireless EV Charger',
-    width: 800,
+    width: 900,
     height: 600,
     webPreferences: {
       nodeIntegration: false,
@@ -16,10 +16,40 @@ function createMainWindow() {
       preload: path.join(__dirname, 'preload.js')
     }
   });
-  mainWindow.setMinimumSize(800, 600);
+  mainWindow.setMinimumSize(900, 600);
   mainWindow.setMenu(null);
 
-  mainWindow.webContents.openDevTools();
+  const aspectRatio = 3 / 2; // Replace with your desired aspect ratio
+  let prevSize = mainWindow.getSize();
+
+  mainWindow.on('resize', () => {
+    const [width, height] = mainWindow.getSize();
+    const [prevWidth, prevHeight] = prevSize;
+  
+    if (width > prevWidth || height > prevHeight) {
+      // Increasing both width and height
+      if (aspectRatio > width / height) {
+        const newWidth = Math.floor(height * aspectRatio);
+        mainWindow.setSize(newWidth, height);
+      } else {
+        const newHeight = Math.floor(width / aspectRatio);
+        mainWindow.setSize(width, newHeight);
+      }
+    } else {
+      // Decreasing or equal size, adjust based on the smaller dimension
+      if (aspectRatio < width / height) {
+        const newWidth = Math.floor(height * aspectRatio);
+        mainWindow.setSize(newWidth, height);
+      } else {
+        const newHeight = Math.floor(width / aspectRatio);
+        mainWindow.setSize(width, newHeight);
+      }
+    }
+
+    prevSize = mainWindow.getSize();
+  });
+
+  //mainWindow.webContents.openDevTools();
   mainWindow.loadFile('index.html');
 
   mainWindow.webContents.on('did-finish-load', () => {
@@ -68,8 +98,17 @@ function startModbusCommunication() {
           if (error) {
             console.error('Error reading holding registers:', error);
           } else {
-            const registerValues = data.data;
-            mainWindow.webContents.send('update', registerValues);
+            var registerValues = data.data.map(value => {
+              // Convert unsigned to signed
+              if (value >= 0x8000) {
+                  return value - 0x10000;
+              } else {
+                  return value;
+              }
+          });
+
+          console.log(registerValues);
+          mainWindow.webContents.send('update', registerValues);
           }
         }
         else {
