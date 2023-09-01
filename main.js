@@ -19,7 +19,7 @@ function createMainWindow() {
   mainWindow.setMinimumSize(800, 600);
   mainWindow.setMenu(null);
 
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
   mainWindow.loadFile('index.html');
 
   mainWindow.webContents.on('did-finish-load', () => {

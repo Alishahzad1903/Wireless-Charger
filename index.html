@@ -20,7 +20,11 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
+<style>
+  .btn-link a:hover {
+      text-decoration: none;
+  }
+</style>
 <body>
   <!-- Main container -->
   <div class="container-fluid">
@@ -29,21 +33,39 @@
       <!-- Sidebar column -->
       <div class="col-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #252525;">
         <!-- Sidebar buttons with Font Awesome icons -->
-        <label class="btn btn-link text-white my-md-2 my-lg-4 checked">
-          <input type="radio" title="Home" onclick=""><i class="fas fa-house" style="font-size: 3vw;"></i>
-        </label>
+
+
         
-        <label class="btn btn-link text-white my-md-2 my-lg-4">
-          <input type="radio" title="Settings" onclick="window.location.href='backpage.html'"><i class="fas fa-sliders" style="font-size: 3vw;"></i>
-        </label>
-        
-        <label class="btn btn-link text-white my-md-2 my-lg-4">
-          <input type="radio" title="Device" onclick="window.location.href='connectionSettings.html'"><i class="fas fa-gear" style="font-size: 3vw;"></i>
-        </label>
-        
-        <label class="btn btn-link text-white my-md-2 my-lg-4">
-          <input type="radio" title="About" onclick="window.location.href='about.html'"><i class="fas fa-circle-question" style="font-size: 3vw;"></i>
-        </label>
+        <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="window.location.href='index.html'">
+          <div class="d-flex align-items-center">
+              <i class="fas fa-house" style="font-size: 2vw; color:aqua;"></i>
+              <span class="d-none d-lg-inline ml-2 mt-1">Home</span>
+          </div>
+      </button>
+
+      <!-- Button for Settings with icon and text -->
+      <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick="window.location.href='backpage.html'">
+          <div class="d-flex align-items-center">
+              <i class="fas fa-sliders" style="font-size: 2vw;"></i>
+              <span class="d-none d-lg-inline ml-2">Settings</span>
+          </div>
+      </button>
+
+      <!-- Button for Device with icon and text -->
+      <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'">
+          <div class="d-flex align-items-center">
+              <i class="fas fa-gear" style="font-size: 2vw;"></i>
+              <span class="d-none d-lg-inline ml-2">Device</span>
+          </div>
+      </button>
+
+      <!-- Button for About with icon and text -->
+      <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick="">
+          <div class="d-flex align-items-center">
+              <i class="fas fa-circle-question" style="font-size: 2vw;"></i>
+              <span class="d-none d-lg-inline ml-2">About</span>
+          </div>
+      </button>
       </div>
       <!-- Main content column -->
       <div class="col-11 home" id="main-content">
