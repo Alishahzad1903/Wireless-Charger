@@ -5,7 +5,9 @@
   /* background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(14,121,9,1) 0%, rgba(124,123,123,1) 0%, rgba(105,105,105,1) 0%, rgba(1,207,242,1) 100%); */
 }
-
+.btn-link a:hover {
+  text-decoration: none;
+}
 .card1 {
   width: 100%;
   margin-top:5%;
