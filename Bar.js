@@ -9,10 +9,10 @@ window.electronAPI.handlecontroller((event, registerValues) => {
     updateValue8 = registerValues[8];
     updateValue9 = registerValues[9];
 
-    $('#pin').animate({ width: updateValue6 + '%' });
-    $('#pout').animate({ width: updateValue7 + '%' });
-    $('#ein').animate({ width: updateValue8 + '%' });
-    $('#eout').animate({ width: updateValue9 + '%' });
+    $('#pin').animate({ width: (updateValue6+1000)/20 + '%' });
+    $('#pout').animate({ width: (updateValue7+1000)/20 + '%' });
+    $('#ein').animate({ width: (updateValue8+1000)/20 + '%' });
+    $('#eout').animate({ width: (updateValue9+1000)/20 + '%' });
   
     
   

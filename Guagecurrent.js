@@ -19,7 +19,7 @@ function createcurrentChart() {
 
   var datacurrent = {
     datasets: [{ 
-      data: [0, 100-0],
+      data: [1000 + 0, 1000 - 0],
       backgroundColor: ['#33FF57','#d6d4d0'],
       borderWidth: 0
     }]
@@ -70,7 +70,7 @@ function createcurrentChart() {
       ctx.font='40px MyCustomFont2';
       ctx.textAlign='center';
       ctx.textBaseLine='top';
-      const score=data.datasets[0].data[0];
+      const score=data.datasets[0].data[0] - 1000;
       ctx.fillStyle = 'rgba(255, 255, 255, 1)';
       ctx.fillText(score,X,Y-0.3*height);
 
@@ -92,7 +92,7 @@ function createcurrentChart() {
 }
 
 function updatecurrentChart() {
-  gaugecurrent.data.datasets[0].data = [newgauge1, 100 - newgauge1];
+  gaugecurrent.data.datasets[0].data = [1000 + newgauge1, 1000 - newgauge1];
   gaugecurrent.update();
 }
 

@@ -98,8 +98,17 @@ function startModbusCommunication() {
           if (error) {
             console.error('Error reading holding registers:', error);
           } else {
-            const registerValues = data.data;
-            mainWindow.webContents.send('update', registerValues);
+            var registerValues = data.data.map(value => {
+              // Convert unsigned to signed
+              if (value >= 0x8000) {
+                  return value - 0x10000;
+              } else {
+                  return value;
+              }
+          });
+
+          console.log(registerValues);
+          mainWindow.webContents.send('update', registerValues);
           }
         }
         else {
