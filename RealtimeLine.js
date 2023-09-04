@@ -13,20 +13,20 @@ const data = {
     datasets: [
         {
             data: [],
-            borderColor: 'rgba(75, 192, 192, 1)',
-            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: '#FFD700',
+            backgroundColor: '#FFD700',
             borderWidth: 2
         },
         {
             data: [],
-            borderColor: '#646464',
-            backgroundColor: 'rgba(192, 75, 192, 0.2)',
+            borderColor: '#00FF7F',
+            backgroundColor: '#00FF7F',
             borderWidth: 2
         },
         {
             data: [],
-            borderColor: '#d6d4d0',
-            backgroundColor: 'rgba(192, 192, 75, 0.2)',
+            borderColor: '#1E90FF',
+            backgroundColor: '#1E90FF',
             borderWidth: 2
         }
     ]
