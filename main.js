@@ -107,7 +107,6 @@ function startModbusCommunication() {
               }
           });
 
-          console.log(registerValues);
           mainWindow.webContents.send('update', registerValues);
           }
         }

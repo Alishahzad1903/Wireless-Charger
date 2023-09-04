@@ -20,55 +20,48 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<style>
-  .btn-link a:hover {
-      text-decoration: none;
-  }
-</style>
+
 <body>
   <!-- Main container -->
   <div class="container-fluid">
     <!-- Main row -->
     <div class="row vh-100">
       <!-- Sidebar column -->
-      <div class="col-1 text-white d-flex flex-column justify-content-start py-3" style="background-color: #252525;">
+      <div class="col-1 text-white d-flex flex-column justify-content-start py-5" style="background-color: #252525;">
         <!-- Sidebar buttons with Font Awesome icons -->
-
-
-        
-        <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="window.location.href='index.html'">
-          <div class="d-flex align-items-center">
-              <i class="fas fa-house" style="font-size: 2vw; color:aqua;"></i>
-              <span class="d-none d-lg-inline ml-2 mt-1">Home</span>
+        <button class="btn btn-link text-white my-4" type="button" title="Home" onclick="window.location.href='index.html'">
+          <div class="d-flex justify-content-start" style="margin-left: -40%;">
+            <i class="fas fa-house" style="font-size: 4vh; color:aqua;"></i>
+            <span class="d-none d-xl-inline ml-2" style="color: aqua;">Home</span>
           </div>
-      </button>
+        </button>
 
-      <!-- Button for Settings with icon and text -->
-      <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick="window.location.href='backpage.html'">
-          <div class="d-flex align-items-center">
-              <i class="fas fa-sliders" style="font-size: 2vw;"></i>
-              <span class="d-none d-lg-inline ml-2">Settings</span>
+        <!-- Button for Settings with icon and text -->
+        <button class="btn btn-link text-white my-4" type="button" title="Settings" onclick="window.location.href='backpage.html'">
+          <div class="d-flex justify-content-start" style="margin-left: -40%;">
+          <i class="fas fa-sliders" style="font-size: 4vh;"></i>
+          <span class="d-none d-xl-inline ml-2">Device</span>
           </div>
-      </button>
+        </button>
 
-      <!-- Button for Device with icon and text -->
-      <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'">
-          <div class="d-flex align-items-center">
-              <i class="fas fa-gear" style="font-size: 2vw;"></i>
-              <span class="d-none d-lg-inline ml-2">Device</span>
-          </div>
-      </button>
+        <!-- Button for Device with icon and text -->
+        <button class="btn btn-link text-white my-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'">
+          <div class="d-flex justify-content-start" style="margin-left: -40%;">
+            <i class="fas fa-gear" style="font-size: 4vh;"></i>
+            <span class="d-none d-xl-inline ml-2">Settings</span>
+            </div>
+        </button>
 
-      <!-- Button for About with icon and text -->
-      <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick="">
-          <div class="d-flex align-items-center">
-              <i class="fas fa-circle-question" style="font-size: 2vw;"></i>
-              <span class="d-none d-lg-inline ml-2">About</span>
-          </div>
-      </button>
+        <!-- Button for About with icon and text -->
+        <button class="btn btn-link text-white my-4" type="button" title="About" onclick="window.location.href='about.html'">
+          <div class="d-flex justify-content-start" style="margin-left: -40%;">
+            <i class="fas fa-circle-question" style="font-size: 4vh;"></i>
+            <span class="d-none d-xl-inline ml-2">About</span>
+            </div>
+        </button>
       </div>
       <!-- Main content column -->
-      <div class="col-11 home" id="main-content">
+      <div class="col-11 home d-flex flex-column justify-content-start" id="main-content">
         <!-- Top section -->
         <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
           <div class="p-2"><span class="lead" style="color: white;">cyberSpace</span></div>
@@ -353,6 +346,9 @@
     
   
   <style>
+      .btn-link a:hover {
+      text-decoration: none;
+  }
 
     
     .hovere {
