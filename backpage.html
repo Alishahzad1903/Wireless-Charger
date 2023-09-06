@@ -16,42 +16,48 @@
     <div class="container-fluid">
         <div class="row vh-100">
             <!-- Sidebar -->
-            <div class="col-1 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3"
-                style="background-color: #252525  ">
-                <!-- Button for Home with icon -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="window.location.href='index.html'">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-house" style="font-size: 2vw;"></i>
-                        <span class="d-none d-lg-inline ml-2 mt-1">Home</span>
-                    </div>
+            <div class="col-2 text-white d-flex flex-column align-items-center " style="background-color: #252525;">
+                <div class="d-flex justify-content-start mb-4 mt-4 ml-2">
+                    <img src="logo 1.svg" style="width: 80%;"> 
+                </div>
+                <div class="justify-content-start">
+                  <!-- Sidebar buttons with Font Awesome icons -->
+                <button class="btn btn-link text-white my-4" type="button" title="Home" onclick="window.location.href='index.html'">
+                  <div class="d-flex justify-content-start buttons">
+                    <i class="fas fa-house" style="font-size: 3vw; "></i>
+                    <span class="ml-3" style="font-size: 2vw;">Home</span>
+                  </div>
                 </button>
-    
+        
                 <!-- Button for Settings with icon and text -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick="window.location.href='backpage.html'">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-sliders" style="font-size: 2vw;color: aqua;"></i>
-                        <span class="d-none d-lg-inline ml-2">Settings</span>
-                    </div>
+                <button class="btn btn-link text-white my-4" type="button" title="Settings" onclick="window.location.href='backpage.html'">
+                  <div class="d-flex justify-content-start buttons ">
+                    <i class="fas fa-sliders" style="font-size: 3vw; color: aqua;"></i>
+                    <span class="ml-3" style="font-size: 2vw; color: aqua;">Device</span>
+                  </div>
                 </button>
-    
+        
                 <!-- Button for Device with icon and text -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-gear" style="font-size: 2vw;"></i>
-                        <span class="d-none d-lg-inline ml-2">Device</span>
+                <button class="btn btn-link text-white my-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'">
+                  <div class="d-flex justify-content-start buttons">
+                    <i class="fas fa-gear" style="font-size: 3vw;"></i>
+                    <span class="ml-3" style="font-size: 2vw;">Settings</span>
                     </div>
                 </button>
-    
+        
                 <!-- Button for About with icon and text -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick="window.location.href='about.html'">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-circle-question" style="font-size: 2vw; "></i>
-                        <span class="d-none d-lg-inline ml-2">About</span>
+                <button class="btn btn-link text-white my-4 buttons" type="button" title="About" onclick="window.location.href='about.html'">
+                  <div class="d-flex justify-content-start">
+                    <i class="fas fa-circle-question" style="font-size: 3vw;"></i>
+                    <span class="ml-3" style="font-size: 2vw;">About</span>
                     </div>
-                </button>   </div>
+                </button>
+                </div>
+                
+              </div>
 
             <!-- Main Content -->
-            <div class="col-11 col-sm-11 col-md-11 col-lg-11 home px-0" id="main-content">
+            <div class="col-10 home d-flex flex-column justify-content-start" id="main-content">
                 <!-- Page header -->
                 <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
                     <div class="p-2">

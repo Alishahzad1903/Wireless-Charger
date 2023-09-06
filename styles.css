@@ -1,3 +1,9 @@
+sidebar buttons
+ .buttons{
+  margin-left: -5%;
+}
+
+
 /* Home drop down styling */
 .dropdown-content {
   display: none;

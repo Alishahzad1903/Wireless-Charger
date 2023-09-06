@@ -10,47 +10,84 @@
     .btn-link a:hover {
         text-decoration: none;
     }
+    p {
+        color:#ffffffbf;
+    }
+
+    /* Style the scrollbar track */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    /* Style the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 6px;
+    }
+
+    /* Style the scrollbar track when the mouse is over it */
+    ::-webkit-scrollbar-track:hover {
+        background-color: #ddd;
+    }
+
+    /* Style the scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+    /* Style the scrollbar corner (optional) */
+    ::-webkit-scrollbar-corner {
+        background-color: #fff;
+}
+      
+    
 </style>
 <body>
     <div class="container-fluid">
         <div class="row vh-100">
             <!-- Sidebar -->
-            <div class="col-1 col-sm-1 col-md-1 col-lg-1 text-white d-flex flex-column justify-content-start py-3"
-                style="background-color: #252525  ">
-                <!-- Button for Home with icon -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Home" onclick="window.location.href='index.html'">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-house" style="font-size: 2vw;"></i>
-                        <span class="d-none d-lg-inline ml-2 mt-1">Home</span>
-                    </div>
+            <div class="col-2 text-white d-flex flex-column align-items-center " style="background-color: #252525;">
+                <div class="d-flex justify-content-start mb-4 mt-4 ml-2">
+                    <img src="logo 1.svg" style="width: 80%;"> 
+                </div>
+                <div class="justify-content-start">
+                  <!-- Sidebar buttons with Font Awesome icons -->
+                <button class="btn btn-link text-white my-4" type="button" title="Home" onclick="window.location.href='index.html'">
+                  <div class="d-flex justify-content-start buttons">
+                    <i class="fas fa-house" style="font-size: 3vw; "></i>
+                    <span class="ml-3" style="font-size: 2vw;">Home</span>
+                  </div>
                 </button>
-    
+        
                 <!-- Button for Settings with icon and text -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Settings" onclick="window.location.href='backpage.html'">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-sliders" style="font-size: 2vw;"></i>
-                        <span class="d-none d-lg-inline ml-2">Settings</span>
-                    </div>
+                <button class="btn btn-link text-white my-4" type="button" title="Settings" onclick="window.location.href='backpage.html'">
+                  <div class="d-flex justify-content-start buttons">
+                    <i class="fas fa-sliders" style="font-size: 3vw;"></i>
+                    <span class="ml-3" style="font-size: 2vw; ">Device</span>
+                  </div>
                 </button>
-    
+        
                 <!-- Button for Device with icon and text -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-gear" style="font-size: 2vw;"></i>
-                        <span class="d-none d-lg-inline ml-2">Device</span>
+                <button class="btn btn-link text-white my-4" type="button" title="Device" onclick="window.location.href='connectionSettings.html'">
+                  <div class="d-flex justify-content-start buttons">
+                    <i class="fas fa-gear" style="font-size: 3vw;"></i>
+                    <span class="ml-3" style="font-size: 2vw;">Settings</span>
                     </div>
                 </button>
-    
+        
                 <!-- Button for About with icon and text -->
-                <button class="btn btn-link text-white my-md-2 my-lg-4" type="button" title="About" onclick="">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-circle-question" style="font-size: 2vw; color: aqua;"></i>
-                        <span class="d-none d-lg-inline ml-2">About</span>
+                <button class="btn btn-link text-white my-4 buttons" type="button" title="About" onclick="window.location.href='about.html'">
+                  <div class="d-flex justify-content-start">
+                    <i class="fas fa-circle-question" style="font-size: 3vw; color: aqua;"></i>
+                    <span class="ml-3" style="font-size: 2vw; color: aqua;">About</span>
                     </div>
-                </button> </div>
+                </button>
+                </div>
+                
+              </div>
 
             <!-- Main Content -->
-            <div class="col-11 col-sm-11 col-md-11 col-lg-11 home px-0" id="main-content">
+            <div class="col-10 home d-flex flex-column justify-content-start" id="main-content">
                 <!-- Page header -->
                 <div class="d-flex flex-row justify-content-center align-items-center" style="height: 5vh;">
                     <div class="p-2">
@@ -77,52 +114,57 @@
                         <h2>About</h2>
                     </div>
 
-                    <div class="card1 shadow">
-                        <div class="row">
-                            <div class="col name">
-                                <p style="font-size: 2vw;"></p>
-                            </div>
-                            <div class="col">
-
-                            </div>
+                    <div class="card1 shadow" style="height: 75vh;">
+                        <div class="container-fluid" style="overflow: auto;">
+                        <h4>About us</h4>                        
+                        <p>We're on a mission to make electric vehicle (EV) charging more convenient, efficient, and eco-friendly.
+                        Our app monitors and optimizes wireless EV chargers, offering hassle-free charging solutions for a greener world.
+                        </p>
+                    
+                        <h4>Our Vision</h4>
+                        <p>
+                            We believe in the power of EVs to combat climate change. However, limited battery energy density poses challenges.
+                            We're dedicated to making frequent and convenient charging the norm for EV drivers.
+                        </p>
+                    
+                        <h4>Wireless Charging Simplified</h4>
+                        <p>
+                            Our app leverages wireless power transfer (WPT), particularly inductive power transfer (IPT), for tangle-free,
+                            user-friendly charging. No cords, no hassle.
+                        </p>
+                    
+                        <h4>Unlocking EV Potential</h4>
+                        <p>
+                            We're exploring EVs as mobile power sources for the grid and homes (V2G and V2H). Bidirectional wireless
+                            charging is part of our vision.
+                        </p>
+                    
+                        <h4>Cutting-Edge Tech</h4>
+                        <p>
+                            Our current project: a game-changing 22 kW Nanocrystalline IPT system for efficient, high-density wireless EV
+                            charging. We're pushing the boundaries.
+                        </p>
+                    
+                        <h4>Our Impact</h4>
+                        <p>
+                            Beyond science, our tech enhances user convenience and reduces energy consumption. Join us in driving a cleaner,
+                            sustainable future.
+                        </p>
+                        <h4>Find more</h4>
+                        <a href="https://www.ee.cityu.edu.hk/~chjiang/Research.html">
+                            https://www.ee.cityu.edu.hk/~chjiang/Research.html
+                        </a>
                         </div>
 
-                        <div class="row">
-                            <div class="col name">
-                                <p style="font-size: 2vw;"></p>
-                            </div>
-                            <div class="col">
-
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col name">
-                                <p style="font-size: 2vw;"></p>
-                            </div>
-                            <div class="col">                                
-
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col name">
-                                <p style="font-size: 2vw;"></p>
-                            </div>
-                            <div class="col">
-
-                            </div>
-                        </div>
-
-                        
-                        
-                        
-
-
-                  
                     </div>
                 </div>
+                <footer class="text-white text-center sticky-bottom" style="height: 5vh; width: 100%;">
+                    <div class="container-fluid">
+                        <p>&copy; 2023 Muhammad Haris Mumtaz and Ali Shahzad. All rights reserved.</p>
+                    </div>
+                </footer>
             </div>
+            
         </div>
     </div>
 </body>
