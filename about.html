@@ -13,6 +13,32 @@
     p {
         color:#ffffffbf;
     }
+
+    /* Style the scrollbar track */
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    /* Style the scrollbar thumb */
+    ::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 6px;
+    }
+
+    /* Style the scrollbar track when the mouse is over it */
+    ::-webkit-scrollbar-track:hover {
+        background-color: #ddd;
+    }
+
+    /* Style the scrollbar thumb on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+
+    /* Style the scrollbar corner (optional) */
+    ::-webkit-scrollbar-corner {
+        background-color: #fff;
+}
       
     
 </style>
@@ -88,9 +114,9 @@
                         <h2>About</h2>
                     </div>
 
-                    <div class="card1 shadow">
-                        <h4>About us</h4>
-                        
+                    <div class="card1 shadow" style="height: 75vh;">
+                        <div class="container-fluid" style="overflow: auto;">
+                        <h4>About us</h4>                        
                         <p>We're on a mission to make electric vehicle (EV) charging more convenient, efficient, and eco-friendly.
                         Our app monitors and optimizes wireless EV chargers, offering hassle-free charging solutions for a greener world.
                         </p>
@@ -128,25 +154,17 @@
                         <a href="https://www.ee.cityu.edu.hk/~chjiang/Research.html">
                             https://www.ee.cityu.edu.hk/~chjiang/Research.html
                         </a>
+                        </div>
 
-                        
-
-                        
-
-                        
-                        
-                        
-
-
-                  
                     </div>
                 </div>
+                <footer class="text-white text-center sticky-bottom" style="height: 5vh; width: 100%;">
+                    <div class="container-fluid">
+                        <p>&copy; 2023 Muhammad Haris Mumtaz and Ali Shahzad. All rights reserved.</p>
+                    </div>
+                </footer>
             </div>
-            <footer class="bg-dark text-white text-center py-3 sticky-bottom">
-                <div class="container">
-                    <p>&copy; 2023 Muhammad Haris Mumtaz and Ali Shahzad. All rights reserved.</p>
-                </div>
-            </footer>
+            
         </div>
     </div>
 </body>
