@@ -1,7 +1,7 @@
 
 
 var updateValue, updateValue1, updateValue2, updateValue3, updateValue4; 
-var updateValue5, updateValue6, updateValue7, updateValue8, updateValue9 ;
+var updateValue5, updateValue6, updateValue7, updateValue8, updateValue9;
 
 window.electronAPI.handlecontroller((event, registerValues) => {
     updateValue6 = registerValues[6];

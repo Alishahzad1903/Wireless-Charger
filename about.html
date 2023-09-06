@@ -6,6 +6,10 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<script>
+    // Make sure this script is included in your HTML file after loading preload.js
+    const { electronAPI } = window;
+</script>
 <style>
     .btn-link a:hover {
         text-decoration: none;
@@ -151,84 +155,18 @@
                             sustainable future.
                         </p>
                         <h4>Find more</h4>
-                        <a href="https://www.ee.cityu.edu.hk/~chjiang/Research.html">
-                            https://www.ee.cityu.edu.hk/~chjiang/Research.html
-                        </a>
-                        </div>
+                        <a href="#" onclick="window.electronAPI.openExternalLink('https://www.ee.cityu.edu.hk/~chjiang/Research.html')">https://www.ee.cityu.edu.hk/~chjiang/Research.html</a>
+                    </div>
 
-                    </div>
                 </div>
-                <footer class="text-white text-center sticky-bottom" style="height: 5vh; width: 100%;">
-                    <div class="container-fluid">
-                        <p>&copy; 2023 Muhammad Haris Mumtaz and Ali Shahzad. All rights reserved.</p>
-                    </div>
-                </footer>
             </div>
-            
+            <footer class="text-white text-center sticky-bottom" style="height: 5vh; width: 100%;">
+                <div class="container-fluid">
+                    <p>&copy; 2023 Muhammad Haris Mumtaz and Ali Shahzad. All rights reserved.</p>
+                </div>
+            </footer>
         </div>
     </div>
 </body>
-
-
-<script>
-
-    const dropdowns = document.querySelectorAll('.dropdown');
-
-    dropdowns.forEach(dropdown => {
-
-        const select = dropdown.querySelector('.select');
-        const caret = dropdown.querySelector('.caret');
-        const options = dropdown.querySelector('.options');
-        const list = dropdown.querySelectorAll('.options li');
-        const selected = dropdown.querySelector('.selected');
-
-        select.addEventListener('click', () => {
-
-            select.classList.toggle('select-clicked');
-            caret.classList.toggle('caret-rotate');
-            options.classList.toggle('options-open');
-
-        });
-
-        list.forEach(option => {
-            
-            option.addEventListener('click', () => {
-
-                selected.innerText = option.innerText;
-                select.classList.remove('select-clicked');
-                caret.classList.remove('caret-rotate');
-                options.classList.remove('options-open');
-
-                list.forEach(option => {
-                    option.classList.remove('active');
-                });
-
-                option.classList.add('active');
-            });
-        });
-    });
-
-
-
-
-
-
-
-    function updateScore() {
-    const slider = document.getElementById('myRange');
-    const slider1 = document.getElementById('myRange1');
-    const scoreElement = document.getElementById('score');
-    const scoreElement1 = document.getElementById('score1');
-    scoreElement.textContent = slider.value;
-    scoreElement1.textContent = slider1.value;
-    }
-    const slider = document.getElementById('myRange');
-    const slider1 = document.getElementById('myRange1');
-
-    slider.addEventListener('input', updateScore);
-    slider1.addEventListener('input', updateScore);
-
-
-</script>
-
+  
 </html>

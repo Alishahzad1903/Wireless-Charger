@@ -101,119 +101,129 @@
             <!-- Left column -->
             <div class="col-4">
               <div class="cards1" style="height: 65vh">
-                <!-- Card for connection time -->
-                <div class="card1 red" style="text-align: center;">
-                  <div class="row">
-                    <p style="font-family: MyCustomFont2; font-size: 2vw; font-weight:bold; margin:auto;">Connection Time</p>
-                  </div>
-                  <div class="row">
-                    <div class="timer">00:00:00</div>
-                  </div>
-                </div>
+                
                 <!-- Card with dropdown menus -->
                 <div class="card1 blue">
-                  <div class="d-flex flex-column justify-content-center" style="width: 23.5vw">
+                  <div class="row">
+                    <p style="font-family: MyCustomFont2; font-size: 3vw; font-weight:bold; margin:auto;">Options</p>
+                  </div>
+                  <div class="d-flex flex-column justify-content-center mt-1" style="width: 23vw">
                     <!-- Dropdowns for gauge options -->
-                    <div class="row justify-content-between pb-2 pt-2">
+                    <div class="row justify-content-between py-3">
                       <div class="col">
                         <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(1)" id="icon-gauge"></i>
                         <div id="dropdown-1" class="dropdown-content">
-                          <p>Voltage</p>
-                          <p>Current</p>
-                          <p>Resistance</p>
+                          <p>Var 1</p>
+                          <p>Var 2</p>
+                          <p>Var 3</p>
                         </div>
                       </div>
                       <div class="col">
                         <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(2)"  id="icon-gaugecurrent"></i>
                         <div id="dropdown-2" class="dropdown-content">
-                          <p>Current</p>
-                          <p>Voltage</p>
-                          <p>Resistance</p>
+                          <p>Var 2</p>
+                          <p>Var 1</p>
+                          <p>Var 3</p>
                         </div>
                       </div>
                       <div class="col">
                         <i class="fas fa-gauge" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(3)" id="icon-gaugeresistance"></i>
                         <div id="dropdown-3" class="dropdown-content">
-                          <p>Resistance</p>
-                          <p>Voltage</p>
-                          <p>Current</p>
+                          <p>Var 3</p>
+                          <p>Var 1</p>
+                          <p>Var 2</p>
                         </div>
                       </div>
                     </div>
                     <!-- Dropdowns for chart options -->
-                    <div class="row justify-content-between pb-2 pt-2">
+                    <div class="row justify-content-between py-3">
                       <div class="col">
                         <i class="fas fa-chart-line" style="color: #329da8;font-size: 3vw;" onclick="toggleDropdown(4)"  id="Icon-4"></i>
                         <div id="dropdown-4" class="dropdown-content">
-                          <p>1</p>
-                          <p>2</p>
-                          <p>3</p>
+                          <p>Var 4</p>
+                          <p>Var 5</p>
+                          <p>Var 6</p>
                         </div>
                       </div>
                       <div class="col">
                         <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(5)"  id="Icon-5"></i>
                         <div id="dropdown-5" class="dropdown-content">
-                          <p>1</p>
-                          <p>2</p>
-                          <p>3</p>
+                          <p>Var 5</p>
+                          <p>Var 4</p>
+                          <p>Var 6</p>
                         </div>
                       </div>
                       <div class="col">
                         <i class="fas fa-chart-line" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(6)"  id="Icon-6"></i>
                         <div id="dropdown-6" class="dropdown-content">
-                          <p>1</p>
-                          <p>2</p>
-                          <p>3</p>
+                          <p>Var 6</p>
+                          <p>Var 4</p>
+                          <p>Var 5</p>
                         </div>
                       </div>
                     </div>
                     <!-- Dropdowns for bar chart options -->
-                    <div class="row justify-content-between pb-2 pt-2">
+                    <div class="row justify-content-between py-3">
                       <div class="col">
                         <i class="fas fa-bars-progress" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(7)" id="Bar-7"></i>
                         <div id="dropdown-7" class="dropdown-content">
-                          <p>1</p>
-                          <p>2</p>
-                          <p>3</p>
+                          <p>Var A</p>
+                          <p>Var B</p>
+                          <p>Var C</p>
+                          <p>Var D</p>
                         </div>
                       </div>
                       <div class="col">
                         <i class="fas fa-bars-progress" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(8)" id="Bar-8"></i>
                         <div id="dropdown-8" class="dropdown-content">
-                          <p>1</p>
-                          <p>2</p>
-                          <p>3</p>
+                          <p>Var B</p>
+                          <p>Var A</p>
+                          <p>Var C</p>
+                          <p>Var D</p>
                         </div>
                       </div>
                       <div class="col">
                         <i class="fas fa-bars-progress" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(9)" id="Bar-9"></i>
                         <div id="dropdown-9" class="dropdown-content">
-                          <p>1</p>
-                          <p>2</p>
-                          <p>3</p>
+                          <p>Var C</p>
+                          <p>Var A</p>
+                          <p>Var B</p>
+                          <p>Var D</p>
                         </div>
                       </div>
                       <div class="col">
                         <i class="fas fa-bars-progress" style="color: #329da8; font-size: 3vw;" onclick="toggleDropdown(10)" id="Bar-10"></i>
                         <div id="dropdown-10" class="dropdown-content">
-                          <p>1</p>
-                          <p>2</p>
-                          <p>3</p>
+                          <p>Var D</p>
+                          <p>Var A</p>
+                          <p>Var B</p>
+                          <p>Var C</p>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <!-- Card with connection status -->
-                <div class="card1 green">
-                  <div class="spinner-container">
-                    <div class="spin-container">
-                      <span></span>
-                      <span></span>
+                <div class="cards1 greenred">
+                  <!-- Card with connection status -->
+                  <div class="card1 green">
+                    <div class="spinner-container">
+                      <div class="spin-container">
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div class="status-text">Connected</div>
                     </div>
-                    <div class="status-text">Connected</div>
                   </div>
-                </div>
+                  <!-- Card for connection time -->
+                  <div class="card1 red" style="text-align: center;">
+                    <!-- <div class="row">
+                      <p style="font-family: MyCustomFont2; font-size: 2vw; font-weight:bold; margin:auto;">Connection Time</p>
+                    </div> -->
+                    <div class="row">
+                      <div class="timer">00:00:00</div>
+                    </div>
+                  </div>
+                </div>  
               </div>
             </div>
             <!-- Right column -->
