@@ -51,7 +51,7 @@ function createMainWindow() {
   });
 
   //mainWindow.webContents.openDevTools();
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile('main.html');
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.webContents.send('connection-control', isClockRunning);
