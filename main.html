@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .button{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .shadow__btn {
+            padding: 10px 20px;
+            border: none;
+            font-size: 30px;
+            color: #fff;
+            border-radius: 7px;
+            letter-spacing: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: 0.5s;
+            transition-property: box-shadow;
+        }
+          
+        .shadow__btn {
+            background: rgb(0,140,255);
+            box-shadow: 0 0 25px rgb(0,140,255);
+        }
+          
+        .shadow__btn:hover {
+        box-shadow: 0 0 5px rgb(0,140,255),
+                    0 0 25px rgb(0,140,255),
+                    0 0 50px rgb(0,140,255),
+                    0 0 100px rgb(0,140,255);
+        }
+        
+        .loader{
+            position: fixed;
+            top: 72%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+
+        .spinner {
+            --size: 30px;
+            --first-block-clr: #005bba;
+            --second-block-clr: #fed500;
+            --clr: #111;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+           
+        .spinner::after,.spinner::before {
+            box-sizing: border-box;
+            position: absolute;
+            content: "";
+            width: var(--size);
+            height: var(--size);
+            top: 50%;
+            animation: up 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+            left: 50%;
+            background: var(--first-block-clr);
+        }
+           
+        .spinner::after {
+            background: var(--second-block-clr);
+            top: calc(50% - var(--size));
+            left: calc(50% - var(--size));
+            animation: down 2.4s cubic-bezier(0, 0, 0.24, 1.21) infinite;
+        }
+           
+        @keyframes down {
+            0%, 100% {
+             transform: none;
+            }
+           
+            25% {
+             transform: translateX(100%);
+            }
+           
+            50% {
+             transform: translateX(100%) translateY(100%);
+            }
+           
+            75% {
+             transform: translateY(100%);
+            }
+        }
+           
+        @keyframes up {
+            0%, 100% {
+             transform: none;
+            }
+           
+            25% {
+             transform: translateX(-100%);
+            }
+           
+            50% {
+             transform: translateX(-100%) translateY(-100%);
+            }
+           
+            75% {
+             transform: translateY(-100%);
+            }
+        }
+           
+        /* Apply the background image to a pseudo-element */
+        .background-container {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+        }
+
+        .background-container::before {
+            content: "";
+            background-image: url('abstract 2.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.4;
+            position: absolute;
+            top: -5%;
+            left: -5%;
+            right: 0;
+            bottom: 1%;
+            
+        }
+
+        /* Style your other elements */
+        .content {
+            text-align: center;
+            padding: 20px;
+            color: pink; /* Text color on the background */
+            position: relative; /* Ensure content is above pseudo-element */
+        }
+    </style>
+</head>
+<body style="background:#121212;">
+    <div class="background-container">
+        <div class="content">
+            <div class="logo">
+                <img src="logo 1.svg" alt="logo" width="25%" height="25%">
+            </div>
+            <div class="button">
+                <button class="shadow__btn" onclick="window.location.href='index.html'">
+                    Start
+                </button>
+            </div>
+            <div class="loader">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

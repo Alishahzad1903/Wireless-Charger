@@ -18,7 +18,8 @@ function createMainWindow() {
   });
   mainWindow.setMinimumSize(900, 600);
   mainWindow.setMenu(null);
-  mainWindow.webContents.openDevTools();
+  mainWindow.maximize();
+  //mainWindow.webContents.openDevTools();
 
   mainWindow.maximize();
 
@@ -53,7 +54,7 @@ function createMainWindow() {
   });
 
   //mainWindow.webContents.openDevTools();
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile('main.html');
 
   mainWindow.webContents.on('did-finish-load', () => {
     mainWindow.webContents.send('connection-control', isClockRunning);
