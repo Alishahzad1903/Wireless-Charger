@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, shell } = require('electron');
 const path = require('path');
 const ModbusRTU = require('modbus-serial');
 
@@ -20,6 +20,8 @@ function createMainWindow() {
   mainWindow.setMenu(null);
   mainWindow.maximize();
   //mainWindow.webContents.openDevTools();
+
+  mainWindow.maximize();
 
   const aspectRatio = 3 / 2; // Replace with your desired aspect ratio
   let prevSize = mainWindow.getSize();
@@ -126,8 +128,8 @@ function startModbusCommunication() {
 
 function handleSendCommand (event, value) {
   console.log(value);
+  //shell.openExternal('https://www.ee.cityu.edu.hk/~chjiang/Research.html');
 
-  /* Write  */
 }
 
 
@@ -145,6 +147,10 @@ app.whenReady().then(() => {
     }
   })
 
+});
+
+ipcMain.on('open-external-link', (event, url) => {
+  shell.openExternal('https://www.ee.cityu.edu.hk/~chjiang/Research.html');
 });
 
 app.on('window-all-closed', () => {

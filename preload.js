@@ -5,6 +5,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
     handlecontroller: (callback) => ipcRenderer.on('update', callback),
     sendCommand: (value) => ipcRenderer.send('send-command', value),
     handleConnection: (callback) => ipcRenderer.on('connection-control', callback),
+    openExternalLink: (url) => shell.openExternal(url), // Expose the shell object
 })
 
 

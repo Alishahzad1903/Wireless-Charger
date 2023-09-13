@@ -69,7 +69,7 @@ function createvoltageChart() {
       ctx.fillText('1000',right+0.02*width,Y+15);
 
 
-      ctx.font='40px MyCustomFont2';
+      ctx.font='48px MyCustomFont2';
       ctx.textAlign='center';
       ctx.textBaseLine='top';
       const score=data.datasets[0].data[0] - 1000;
@@ -77,7 +77,7 @@ function createvoltageChart() {
       ctx.fillText(score,X,Y-0.3*height);
 
 
-      ctx.font='25px MyCustomFont2';
+      ctx.font='32px MyCustomFont2';
       ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
       ctx.textAlign='center';
       ctx.fillText('Var 1',X,Y)
