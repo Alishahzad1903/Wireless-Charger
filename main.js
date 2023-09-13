@@ -18,7 +18,8 @@ function createMainWindow() {
   });
   mainWindow.setMinimumSize(900, 600);
   mainWindow.setMenu(null);
-  mainWindow.webContents.openDevTools();
+  mainWindow.maximize();
+  //mainWindow.webContents.openDevTools();
 
   const aspectRatio = 3 / 2; // Replace with your desired aspect ratio
   let prevSize = mainWindow.getSize();
