@@ -8,3 +8,36 @@ Item Colour: Hexcode: #329da8 (Shade of Blue)
 
 
 
+{
+  "name": "wirelesscharger",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Muhammad Haris Mumtaz <mhmumtaz2c-@my.cityu.edu.hk>",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "latest",
+    "electron": "latest",
+    "modbus-serial": "latest"
+  },
+  "devDependencies": {
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.yourname.yourapp",
+    "win": {
+      "target": "nsis",
+      "icon": "path/to/your/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "description": "Data Visualisation for wireless charger"
+}
